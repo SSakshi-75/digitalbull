@@ -1,0 +1,124 @@
+/* ==========================================================================
+   DIGITAL BULL — ANIMATIONS CSS
+   Version: 2.0 (2026 Modern Edition)
+   Description: Lightweight keyframes and scroll-reveal utilities.
+   ========================================================================== */
+
+/* Base animation states for scroll reveal */
+[data-db-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-db-animate="fade-in"] {
+  transform: none;
+}
+
+[data-db-animate="fade-down"] {
+  transform: translateY(-24px);
+}
+
+[data-db-animate="fade-left"] {
+  transform: translateX(30px);
+}
+
+[data-db-animate="fade-right"] {
+  transform: translateX(-30px);
+}
+
+[data-db-animate="zoom-in"] {
+  transform: scale(0.94);
+}
+
+/* Revealed active state */
+[data-db-animate].db-animated {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger Delays */
+.db-delay-100 { transition-delay: 100ms !important; }
+.db-delay-200 { transition-delay: 200ms !important; }
+.db-delay-300 { transition-delay: 300ms !important; }
+.db-delay-400 { transition-delay: 400ms !important; }
+.db-delay-500 { transition-delay: 500ms !important; }
+.db-delay-600 { transition-delay: 600ms !important; }
+
+/* Subtle Pulse for CTA indicators */
+@keyframes dbPulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--db-primary-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--db-primary-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--db-primary-rgb), 0);
+  }
+}
+
+.db-pulse {
+  animation: dbPulseGlow 2.5s infinite;
+}
+
+/* Continuous Logo Marquee */
+.db-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: dbMarqueeScroll 35s linear infinite;
+}
+
+.db-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes dbMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Floating element animation for visual elements */
+@keyframes dbFloatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.db-floating {
+  animation: dbFloatSlow 4s ease-in-out infinite;
+}
+
+/* Accessibility: Disable all motion if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-db-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .db-marquee-track {
+    animation: none !important;
+    width: auto !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
+

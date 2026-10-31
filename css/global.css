@@ -1,0 +1,394 @@
+/* ==========================================================================
+   DIGITAL BULL — GLOBAL CSS ARCHITECTURE
+   Version: 2.0 (2026 Modern Edition)
+   Description: Core design tokens, CSS variables, typography, buttons & base styling.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --db-primary: #dc2626;
+  --db-primary-dark: #b91c1c;
+  --db-primary-light: #ef4444;
+  --db-primary-rgb: 220, 38, 38;
+  --db-primary-subtle: rgba(220, 38, 38, 0.08);
+  --db-primary-glow: rgba(220, 38, 38, 0.2);
+
+  /* Neutrals & Surfaces */
+  --db-dark: #0a0f1d;
+  --db-dark-card: #111827;
+  --db-dark-rgb: 10, 15, 29;
+  --db-slate-800: #1e293b;
+  --db-slate-700: #334155;
+  --db-slate-600: #475569;
+  --db-slate-500: #64748b;
+  --db-slate-400: #94a3b8;
+  --db-slate-300: #cbd5e1;
+  --db-slate-200: #e2e8f0;
+  --db-slate-100: #f1f5f9;
+  --db-slate-50: #f8fafc;
+  --db-white: #ffffff;
+
+  /* Semantic Typography */
+  --db-text-main: #0f172a;
+  --db-text-body: #334155;
+  --db-text-muted: #64748b;
+  --db-text-light: #94a3b8;
+  --db-text-white: #ffffff;
+
+  /* Typography Font Families */
+  --db-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --db-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  /* Elevation Shadows */
+  --db-shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --db-shadow-sm: 0 2px 4px 0 rgba(15, 23, 42, 0.06);
+  --db-shadow-md: 0 6px 16px -2px rgba(15, 23, 42, 0.08);
+  --db-shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.1);
+  --db-shadow-xl: 0 20px 38px -6px rgba(15, 23, 42, 0.14);
+  --db-shadow-glow: 0 8px 30px rgba(220, 38, 38, 0.25);
+
+  /* Borders & Radii */
+  --db-border: #e2e8f0;
+  --db-border-dark: #1e293b;
+  --db-border-subtle: rgba(226, 232, 240, 0.8);
+  --db-radius-sm: 6px;
+  --db-radius-md: 10px;
+  --db-radius-lg: 16px;
+  --db-radius-xl: 24px;
+  --db-radius-full: 9999px;
+
+  /* Micro-interactions & Transitions */
+  --db-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --db-transition-fast: all 0.15s ease-in-out;
+  --db-transition-slow: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Spacing */
+  --db-section-py: clamp(4rem, 8vw, 6.5rem);
+}
+
+/* ==========================================================================
+   Base & Reset Overrides
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.db-body {
+  font-family: var(--db-font-main);
+  background-color: var(--db-white);
+  color: var(--db-text-body);
+  line-height: 1.6;
+  font-size: 1rem;
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
+}
+
+/* Skip link for screen readers */
+.db-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--db-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  z-index: 99999;
+  border-radius: var(--db-radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.db-skip-link:focus {
+  top: 1rem;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 2px solid var(--db-primary);
+  outline-offset: 3px;
+}
+
+a {
+  color: var(--db-primary);
+  text-decoration: none;
+  transition: var(--db-transition);
+}
+
+a:hover {
+  color: var(--db-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Shared Typography & Section Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+.db-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.db-section-header.text-start {
+  text-align: left;
+  margin-left: 0;
+}
+
+.db-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--db-primary-subtle);
+  color: var(--db-primary);
+  border: 1px solid rgba(var(--db-primary-rgb), 0.18);
+  border-radius: var(--db-radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.db-section-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.db-section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--db-text-main);
+  line-height: 1.2;
+  margin-bottom: 1.125rem;
+}
+
+.db-section-title span.text-highlight {
+  color: var(--db-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.db-section-subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--db-text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Button Components
+   ========================================================================== */
+
+.db-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--db-radius-full);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: var(--db-transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.db-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s ease;
+}
+
+.db-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.db-btn-primary {
+  background-color: var(--db-primary);
+  color: var(--db-white);
+  border-color: var(--db-primary);
+  box-shadow: 0 4px 14px rgba(var(--db-primary-rgb), 0.35);
+}
+
+.db-btn-primary:hover {
+  background-color: var(--db-primary-dark);
+  border-color: var(--db-primary-dark);
+  color: var(--db-white);
+  box-shadow: 0 6px 20px rgba(var(--db-primary-rgb), 0.45);
+  transform: translateY(-2px);
+}
+
+.db-btn-outline {
+  background-color: transparent;
+  color: var(--db-text-main);
+  border-color: var(--db-slate-300);
+}
+
+.db-btn-outline:hover {
+  background-color: var(--db-slate-100);
+  border-color: var(--db-slate-400);
+  color: var(--db-text-main);
+  transform: translateY(-2px);
+}
+
+.db-btn-outline-white {
+  background-color: transparent;
+  color: var(--db-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.db-btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--db-white);
+  color: var(--db-white);
+  transform: translateY(-2px);
+}
+
+.db-btn-white {
+  background-color: var(--db-white);
+  color: var(--db-primary-dark);
+  border-color: var(--db-white);
+  box-shadow: var(--db-shadow-md);
+}
+
+.db-btn-white:hover {
+  background-color: var(--db-slate-50);
+  color: var(--db-primary);
+  box-shadow: var(--db-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.db-btn-sm {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.db-btn-lg {
+  padding: 1.1rem 2.25rem;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Shared Badges & Utility Components
+   ========================================================================== */
+
+.db-badge-soft {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background-color: var(--db-slate-100);
+  color: var(--db-slate-700);
+  border-radius: var(--db-radius-full);
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.db-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--db-radius-md);
+  background: var(--db-primary-subtle);
+  color: var(--db-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--db-transition);
+}
+
+.db-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Subtle Back-to-Top */
+.db-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  background: var(--db-dark);
+  color: #fff;
+  border-radius: var(--db-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--db-shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--db-transition);
+  z-index: 1000;
+  cursor: pointer;
+  border: 1px solid var(--db-slate-700);
+}
+
+.db-back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.db-back-to-top:hover {
+  background: var(--db-primary);
+  color: #fff;
+  transform: translateY(-3px);
+  border-color: var(--db-primary);
+}
+
+.db-back-to-top svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--db-slate-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--db-slate-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--db-slate-400);
+}

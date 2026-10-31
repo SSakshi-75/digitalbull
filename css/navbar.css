@@ -1,0 +1,481 @@
+/* ==========================================================================
+   DIGITAL BULL — CLASSIC AGENCY HEADER (SCREENSHOT MATCHED)
+   Theme: Navy Blue Topbar (#012559) + Clean White Navbar with Red (#ea262a) Accents
+   ========================================================================== */
+
+:root {
+  --db-navy: #012559;
+  --db-red: #ea262a;
+  --db-red-dark: #c9181c;
+}
+
+/* --------------------------------------------------------------------------
+   1. BLUE LINE TOPBAR (#012559)
+   -------------------------------------------------------------------------- */
+.db-topbar {
+  background-color: var(--db-navy, #012559);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.01em;
+}
+
+.db-topbar a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.db-topbar a:hover {
+  opacity: 0.85;
+  color: #ffffff;
+}
+
+.db-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.db-topbar-item svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.db-topbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.db-topbar-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.db-topbar-socials a:hover {
+  background-color: var(--db-red, #ea262a);
+  transform: translateY(-1px);
+}
+
+.db-topbar-socials svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN STICKY NAVBAR (.db-header) - Clean White Surface
+   -------------------------------------------------------------------------- */
+.db-header {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.db-header.db-navbar-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.db-navbar {
+  padding: 0.65rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.db-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.db-brand img {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. DESKTOP NAVIGATION MENU (CLASSIC CLEAN TEXT LINKS)
+   -------------------------------------------------------------------------- */
+.db-nav-collapse.d-lg-flex {
+  display: flex !important;
+  align-items: center;
+}
+
+.db-nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.db-nav-item {
+  position: relative;
+}
+
+.db-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.65rem;
+  color: var(--db-navy, #012559);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Remove default Bootstrap caret */
+.db-nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+.db-nav-link:hover,
+.db-nav-link.active {
+  color: var(--db-red, #ea262a) !important;
+}
+
+.db-nav-link svg.db-chevron {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.db-nav-item.dropdown:hover .db-chevron {
+  transform: rotate(180deg);
+  fill: var(--db-red, #ea262a);
+}
+
+/* Services Dropdown */
+.db-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  min-width: 300px;
+  padding: 0.65rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .db-nav-item.dropdown:hover>.db-dropdown-menu {
+    display: block;
+    animation: dbNavFade 0.2s ease forwards;
+  }
+}
+
+@keyframes dbNavFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.db-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  color: #1e293b;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.db-dropdown-item:hover {
+  background: #f8fafc;
+  color: var(--db-red, #ea262a);
+}
+
+.db-dropdown-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(1, 37, 89, 0.06);
+  color: var(--db-navy, #012559);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.db-dropdown-item:hover .db-dropdown-item-icon {
+  background: var(--db-red, #ea262a);
+  color: #ffffff;
+}
+
+.db-dropdown-item-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.db-dropdown-item-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.db-dropdown-item-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* --------------------------------------------------------------------------
+   4. RIGHT HEADER CTA BUTTONS (Free Demo & Login) — Premium Agency Polish
+   -------------------------------------------------------------------------- */
+.db-btn-nav-primary,
+.db-header .db-btn.db-btn-primary,
+.db-header-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.4rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ff383e 0%, #ea262a 55%, #d11419 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  /* Smooth rounded pill */
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(234, 38, 42, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gloss sheen sweep effect on hover */
+.db-btn-nav-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+
+.db-btn-nav-primary:hover::before {
+  left: 140%;
+}
+
+.db-btn-nav-primary:hover,
+.db-header .db-btn.db-btn-primary:hover,
+.db-header-cta-btn:hover {
+  background: linear-gradient(135deg, #ff4d52 0%, #f02a2e 55%, #dc181d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 38, 42, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+}
+
+.db-btn-nav-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(234, 38, 42, 0.3);
+}
+
+.db-btn-nav-demo {
+  padding: 0.5rem 1.45rem;
+}
+
+.db-btn-nav-login {
+  padding: 0.5rem 1.35rem;
+}
+
+.db-btn-nav-call:hover {
+  background: var(--db-navy, #012559);
+  border-color: var(--db-navy, #012559);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.db-header .db-btn.db-btn-primary svg,
+.db-header-cta-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   5. MOBILE NAVIGATION (RESPONSIVE)
+   -------------------------------------------------------------------------- */
+.db-navbar-toggler {
+  display: none;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: var(--db-navy, #012559);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.db-navbar-toggler:hover {
+  background: #f1f5f9;
+  color: var(--db-red, #ea262a);
+}
+
+.db-navbar-toggler svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .db-topbar {
+    display: none;
+  }
+
+  .db-navbar-toggler {
+    display: flex;
+  }
+
+  .db-brand img {
+    height: 44px;
+  }
+
+  .db-mobile-nav,
+  .db-header .db-nav-collapse.d-lg-none {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-top: 2px solid var(--db-red, #ea262a);
+    z-index: 1039;
+  }
+
+  .db-mobile-nav.show,
+  .db-header .db-nav-collapse.d-lg-none.show {
+    display: flex;
+    animation: dbMobileSlide 0.25s ease-out forwards;
+  }
+
+  @keyframes dbMobileSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .db-mobile-nav .db-nav-menu,
+  .db-header .db-nav-collapse.d-lg-none .db-nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    width: 100%;
+  }
+
+  .db-mobile-nav .db-nav-link,
+  .db-header .db-nav-collapse.d-lg-none .db-nav-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+  }
+
+  .db-mobile-nav .db-nav-link.active,
+  .db-mobile-nav .db-nav-link:hover,
+  .db-header .db-nav-collapse.d-lg-none .db-nav-link.active,
+  .db-header .db-nav-collapse.d-lg-none .db-nav-link:hover {
+    color: var(--db-red, #ea262a) !important;
+    background: rgba(234, 38, 42, 0.06);
+    border-color: rgba(234, 38, 42, 0.2);
+  }
+
+  .db-mobile-nav .db-dropdown-menu,
+  .db-header .db-nav-collapse.d-lg-none .db-dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 8px;
+  }
+
+  .db-mobile-nav .db-nav-item.dropdown.show .db-dropdown-menu,
+  .db-header .db-nav-collapse.d-lg-none .db-nav-item.dropdown.show .db-dropdown-menu {
+    display: block;
+  }
+
+  .db-mobile-nav .db-header-cta,
+  .db-header .db-nav-collapse.d-lg-none .db-header-cta {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .db-mobile-nav .db-btn.db-btn-primary,
+  .db-header .db-nav-collapse.d-lg-none .db-btn.db-btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}

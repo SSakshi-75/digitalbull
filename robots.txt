@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /bin/
+Disallow: /*.config$
+
+Sitemap: https://digitalbull.in/sitemap.xml
+

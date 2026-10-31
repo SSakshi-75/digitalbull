@@ -1,0 +1,11 @@
+/* ==========================================================================
+   DIGITAL BULL — STYLE REGISTRY
+   Version: 2.0 (2026 Modern Architecture)
+   Notice: Modular CSS architecture is in effect. Styles are partitioned into:
+   - css/global.css      (tokens, typography, buttons, shared components)
+   - css/navbar.css      (header, sticky navbar, mobile drawer)
+   - css/footer.css      (footer, contact column, sitemap links)
+   - css/home.css        (scoped homepage sections with .db-home- prefix)
+   - css/responsive.css  (shared responsive utilities)
+   - animations/animations.css (GPU-accelerated reveal animations)
+   ========================================================================== */

@@ -1,0 +1,391 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Page Specific SEO & Meta PlaceHolder -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Core Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="animations/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Page Specific Stylesheet PlaceHolder -->
+    <asp:ContentPlaceHolder ID="StylesheetsContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="db-body">
+    <form id="form1" runat="server">
+        <!-- Accessibility Skip Link -->
+        <a href="#main-content" class="db-skip-link">Skip to main content</a>
+
+
+
+        <!-- Blue Line Topbar (Screenshot Matched) -->
+        <div class="db-topbar">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-4">
+                        <div class="db-topbar-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                            <span>Golghar, Gorakhpur, UP - 273001</span>
+                        </div>
+                        <div class="db-topbar-item d-none d-md-inline-flex">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <a href="mailto:helpdigitalbulls@gmail.com">helpdigitalbulls@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="db-topbar-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <a href="tel:+919044815507" class="fw-semibold">+91-9044815507</a>
+                        </div>
+                        <div class="db-topbar-socials d-none d-sm-flex ms-2">
+                            <a href="https://www.facebook.com/digitalbulljs" target="_blank" rel="noopener noreferrer" aria-label="Digital Bull Facebook">
+                                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/digitalbulljs/" target="_blank" rel="noopener noreferrer" aria-label="Digital Bull Instagram">
+                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                            </a>
+                            <a href="https://www.google.com/maps/place/Digital+Bull%E2%84%A2%7C+Digital+Marketing+Agency+in+Gorakhpur/@26.7538546,83.3700101,17z" target="_blank" rel="noopener noreferrer" aria-label="Digital Bull Google Maps Location">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Main Navbar -->
+        <header class="db-header" role="banner">
+            <div class="container">
+                <nav class="db-navbar d-flex align-items-center justify-content-between" aria-label="Main Navigation">
+                    <!-- Brand Logo -->
+                    <a href="index.aspx" class="db-brand" aria-label="Digital Bull Home">
+                        <img src="assets/LOGO.png" alt="Digital Bull Logo" width="210" height="68" />
+                    </a>
+
+                    <!-- Desktop Nav Menu -->
+                    <div class="db-nav-collapse d-none d-lg-flex align-items-center">
+                        <ul class="db-nav-menu">
+                            <li class="db-nav-item">
+                                <a href="index.aspx" class="db-nav-link active">Home</a>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="#db-about" class="db-nav-link">About</a>
+                            </li>
+                            <li class="db-nav-item dropdown">
+                                <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true">
+                                    <span>Service</span>
+                                    <svg class="db-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                                </a>
+                                <ul class="db-dropdown-menu">
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Digital Marketing</span>
+                                                <span class="db-dropdown-item-desc">360° strategic growth & lead generation</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Search Engine Optimization (SEO)</span>
+                                                <span class="db-dropdown-item-desc">Organic Google rankings & local maps</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">AI SEO / AEO / GEO</span>
+                                                <span class="db-dropdown-item-desc">Generative search & AI engine visibility</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Social Media Marketing</span>
+                                                <span class="db-dropdown-item-desc">Brand awareness & engagement campaigns</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Website & App Development</span>
+                                                <span class="db-dropdown-item-desc">High-speed, SEO-ready web engineering</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Software Development</span>
+                                                <span class="db-dropdown-item-desc">Custom enterprise & CRM business tools</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Performance Marketing</span>
+                                                <span class="db-dropdown-item-desc">Google Ads & Meta Paid Advertising</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="#db-work" class="db-nav-link">Portfolio</a>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="blog.aspx" class="db-nav-link">Blog</a>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="pricing.aspx" class="db-nav-link">Plan</a>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="career.aspx" class="db-nav-link">Career</a>
+                            </li>
+                            <li class="db-nav-item">
+                                <a href="#db-contact" class="db-nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Header CTA Buttons (Exact Screenshot Matched) -->
+                    <div class="d-none d-lg-flex align-items-center gap-2">
+                        <a href="#db-contact" class="db-btn-nav-primary db-btn-nav-demo">Free Demo</a>
+                        <a href="login.aspx" class="db-btn-nav-primary db-btn-nav-login">Login</a>
+                    </div>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button class="db-navbar-toggler d-lg-none" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation Overlay -->
+            <div class="db-nav-collapse d-lg-none" id="dbMobileNav">
+                <ul class="db-nav-menu">
+                    <li class="db-nav-item">
+                        <a href="index.aspx" class="db-nav-link active">Home</a>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="#db-about" class="db-nav-link">About</a>
+                    </li>
+                    <li class="db-nav-item dropdown">
+                        <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false">
+                            <span>Service</span>
+                            <svg class="db-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </a>
+                        <ul class="db-dropdown-menu">
+                            <li><a href="#db-services" class="db-dropdown-item">Digital Marketing</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Search Engine Optimization (SEO)</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">AI SEO / AEO / GEO</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Social Media Marketing</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Website & App Development</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Software Development</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Performance Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="#db-work" class="db-nav-link">Portfolio</a>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="blog.aspx" class="db-nav-link">Blog</a>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="pricing.aspx" class="db-nav-link">Plan</a>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="career.aspx" class="db-nav-link">Career</a>
+                    </li>
+                    <li class="db-nav-item">
+                        <a href="#db-contact" class="db-nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="db-header-cta d-flex gap-2">
+                    <a href="#db-contact" class="db-btn-nav-primary flex-grow-1 text-center">Free Demo</a>
+                    <a href="login.aspx" class="db-btn-nav-primary flex-grow-1 text-center">Login</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body Content Area -->
+        <main id="main-content" class="db-main" role="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <!-- Digital Bull Reference Footer -->
+        <footer class="db-footer" role="contentinfo">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <!-- Column 1: Our Contact Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="db-footer-title">Our Contact Info</h4>
+                        <ul class="db-footer-contact-list">
+                            <li class="db-footer-contact-item">
+                                <div class="db-footer-contact-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                                </div>
+                                <span>Third Floor, Mobile Plaza, Shop No 404, 405, Golghar, Gorakhpur, UP - 273001</span>
+                            </li>
+                            <li class="db-footer-contact-item">
+                                <div class="db-footer-contact-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                </div>
+                                <a href="tel:+919044815507">+91-9044815507</a>
+                            </li>
+                            <li class="db-footer-contact-item">
+                                <div class="db-footer-contact-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                </div>
+                                <a href="mailto:info@digitalbulls.in">info@digitalbulls.in</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Opening Time -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="db-footer-title">Opening Time</h4>
+                        <div class="db-footer-opening-time">
+                            <p class="mb-2"><strong>Monday - Saturday:</strong><br />10:00 AM - 07:00 PM</p>
+                            <p class="mb-3"><strong>Sunday:</strong><br /><span class="db-footer-closed">Closed</span></p>
+                        </div>
+                        <div class="db-footer-socials">
+                            <a href="https://www.facebook.com/digitalbulljs" target="_blank" rel="noopener noreferrer" class="db-footer-social-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/digitalbulljs/" target="_blank" rel="noopener noreferrer" class="db-footer-social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                            </a>
+                            <a href="https://digitalbull.in" target="_blank" rel="noopener noreferrer" class="db-footer-social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/@DigitalBull19" target="_blank" rel="noopener noreferrer" class="db-footer-social-link" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                            <a href="https://www.google.com/maps/place/Digital+Bull%E2%84%A2%7C+Digital+Marketing+Agency+in+Gorakhpur/@26.7538546,83.3700101,17z" target="_blank" rel="noopener noreferrer" class="db-footer-social-link" aria-label="Google Maps Profile">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Our Services -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="db-footer-title">Our Services</h4>
+                        <ul class="db-footer-links">
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Search Engine Optimization</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Social Media Marketing</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Website & App Development</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Software Development</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: We Offer -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="db-footer-title">We Offer</h4>
+                        <ul class="db-footer-links">
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing Training</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
+                            <li><a href="#db-reviews"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Client Reviews</a></li>
+                            <li><a href="pricing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Pricing Plans</a></li>
+                            <li><a href="blog.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Latest Blogs</a></li>
+                            <li><a href="#db-contact"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Career & Opportunities</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Bottom Copyright Bar (Exact Screenshot & DigitalBull Reference) -->
+            <div class="db-footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="mb-0 text-white">
+                                &copy; <span id="db-current-year"><%= DateTime.Now.Year %></span> Digital Bull. All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                            <div class="db-footer-bottom-links">
+                                <a href="privacy-policy.aspx">Privacy Policy</a>
+                                <a href="terms.aspx">Terms & Conditions</a>
+                                <a href="sitemap.xml">XML Sitemap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Floating Action Button (Digital Bull Reference) -->
+        <a href="https://wa.link/05bz8m" target="_blank" rel="noopener noreferrer" class="db-whatsapp-float" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </a>
+
+        <!-- Back to Top Floating Button -->
+        <button type="button" class="db-back-to-top" aria-label="Back to top">
+            <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+        </button>
+    </form>
+
+    <!-- Core Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="animations/scroll-animation.js"></script>
+
+    <!-- Page Specific Script PlaceHolder -->
+    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

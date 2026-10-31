@@ -1,0 +1,94 @@
+/* ==========================================================================
+   DIGITAL BULL — RESPONSIVE UTILITIES & SCREEN OVERRIDES
+   Version: 2.0 (2026 Modern Edition)
+   Description: Cross-device responsiveness from 320px mobile to ultra-wide displays.
+   ========================================================================== */
+
+/* Prevent horizontal overflow globally */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Extra small devices (phones up to 480px) */
+@media (max-width: 480px) {
+  :root {
+    --db-section-py: 3.5rem;
+  }
+
+  .db-section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .db-btn {
+    padding: 0.75rem 1.35rem;
+    font-size: 0.8875rem;
+  }
+
+  .db-btn-lg {
+    padding: 0.95rem 1.65rem;
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .db-back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Small devices (phones, 481px to 767.98px) */
+@media (min-width: 481px) and (max-width: 767.98px) {
+  :root {
+    --db-section-py: 4rem;
+  }
+}
+
+/* Medium devices (tablets, 768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  :root {
+    --db-section-py: 4.75rem;
+  }
+}
+
+/* Large devices (desktops, 992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .db-nav-link {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8875rem;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+/* Ultra wide screens (1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Responsive Grid Helper Utilities */
+.db-grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .db-grid-auto-fit {
+    grid-template-columns: 1fr;
+  }
+}

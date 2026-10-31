@@ -88,7 +88,7 @@
                                 <a href="index.aspx" class="db-nav-link active">Home</a>
                             </li>
                             <li class="db-nav-item">
-                                <a href="#db-about" class="db-nav-link">About</a>
+                                <a href="about.aspx" class="db-nav-link">About</a>
                             </li>
                             <li class="db-nav-item dropdown">
                                 <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true">
@@ -215,7 +215,7 @@
                         <a href="index.aspx" class="db-nav-link active">Home</a>
                     </li>
                     <li class="db-nav-item">
-                        <a href="#db-about" class="db-nav-link">About</a>
+                        <a href="about.aspx" class="db-nav-link">About</a>
                     </li>
                     <li class="db-nav-item dropdown">
                         <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false">

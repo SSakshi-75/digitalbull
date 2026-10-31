@@ -41,8 +41,8 @@
   object-fit: cover;
   object-position: center top;
   opacity: 0.88;
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.8) 50%, black 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.8) 50%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.8) 50%, black 100%);
 }
 
 .db-home-hero-banner-overlay {
@@ -132,6 +132,7 @@
   color: #ea262a;
   background: linear-gradient(135deg, #ea262a 0%, #dc2626 50%, #b91c1c 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
   position: relative;
@@ -585,8 +586,8 @@
   overflow: hidden;
   position: relative;
   padding: 0.5rem 0;
-  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 
 .db-marquee-track {
@@ -759,6 +760,7 @@
   color: #ea262a;
   background: linear-gradient(135deg, #ea262a 0%, #dc2626 50%, #b91c1c 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
 }

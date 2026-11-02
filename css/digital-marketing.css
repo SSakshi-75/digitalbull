@@ -1,0 +1,557 @@
+/* ==========================================================================
+   DIGITAL BULL — DIGITAL MARKETING WITH GROWTH PAGE STYLES
+   Screenshot Matched to user reference (media_1793614143147_ea82c5ae.jpg)
+   Clean, Modular, 100% Isolated to Digital Marketing Service Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.db-dm-hero {
+  position: relative;
+  background-color: #04142e;
+  background-image: 
+    radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.22) 0%, rgba(4, 20, 46, 0.95) 75%),
+    url('../img/about-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6vw, 5rem) 0 clamp(3.2rem, 5.5vw, 4.5rem) 0;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(234, 38, 42, 0.35);
+  box-shadow: inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.db-dm-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-dm-hero-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.95rem;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-shadow: 0 3px 14px rgba(4, 20, 46, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.db-dm-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.935rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  list-style: none;
+  background: rgba(4, 20, 46, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+}
+
+.db-dm-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-dm-breadcrumb a:hover {
+  color: #ea262a;
+}
+
+.db-dm-breadcrumb .db-dm-bc-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+.db-dm-breadcrumb .db-dm-bc-active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN DIGITAL MARKETING SECTION
+   -------------------------------------------------------------------------- */
+.db-dm-section {
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0 clamp(4.5rem, 6.5vw, 6rem) 0;
+  background-color: #f8fafc;
+}
+
+/* Section Eyebrow with Dual Red-Navy Horizontal Accent Lines */
+.db-dm-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.db-dm-eyebrow-text {
+  font-size: clamp(0.95rem, 1.35vw, 1.15rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.db-dm-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 3px;
+}
+
+.db-dm-eyebrow-lines .db-line-navy {
+  width: 26px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-dm-eyebrow-lines .db-line-red {
+  width: 48px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+.db-dm-desc {
+  font-size: 0.965rem;
+  color: #334155;
+  line-height: 1.76;
+  margin-bottom: 3.5rem;
+  max-width: 1140px;
+}
+
+/* --------------------------------------------------------------------------
+   3. ZIGZAG STEP BUSINESS INFOGRAPHIC TIMELINE
+   Matched to user reference (media_1793615744059_5c40475d.jpg)
+   -------------------------------------------------------------------------- */
+.db-zigzag-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem 0;
+}
+
+/* Central Zigzag SVG Line Canvas */
+.db-zigzag-svg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.db-zigzag-steps-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Each Row: Holds Left or Right Item */
+.db-zz-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.db-zz-row-left {
+  justify-content: flex-start;
+  padding-right: 48%;
+}
+
+.db-zz-row-right {
+  justify-content: flex-end;
+  padding-left: 48%;
+}
+
+/* The Card Component Container */
+.db-zz-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 530px;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.db-zz-card:hover {
+  transform: translateY(-4px);
+}
+
+/* White Main Capsule Pill */
+.db-zz-pill {
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 1.25rem 1.65rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07), 0 2px 6px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 2;
+  transition: box-shadow 0.28s ease;
+}
+
+.db-zz-card:hover .db-zz-pill {
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+
+/* Left-Row Pill Layout */
+.db-zz-row-left .db-zz-pill {
+  padding-right: 2.25rem;
+}
+
+/* Right-Row Pill Layout */
+.db-zz-row-right .db-zz-pill {
+  padding-left: 2.25rem;
+  flex-direction: row-reverse;
+}
+
+/* Text inside Pill */
+.db-zz-content {
+  flex: 1 1 auto;
+}
+
+.db-zz-row-left .db-zz-content {
+  text-align: left;
+}
+
+.db-zz-row-right .db-zz-content {
+  text-align: right;
+}
+
+.db-zz-title {
+  font-size: 0.965rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.25;
+}
+
+.db-zz-desc {
+  font-size: 0.845rem;
+  color: #475569;
+  line-height: 1.58;
+  margin: 0;
+}
+
+/* Outer Icon on the Pill edge */
+.db-zz-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8fafc;
+  color: #64748b;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.db-zz-card:hover .db-zz-icon {
+  transform: scale(1.1);
+}
+
+.db-zz-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CONCENTRIC CIRCLE BADGE (STEP 01, 02...)
+   -------------------------------------------------------------------------- */
+.db-zz-circle-wrap {
+  position: relative;
+  z-index: 4;
+  flex: 0 0 74px;
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlap Positioning */
+.db-zz-row-left .db-zz-circle-wrap {
+  margin-left: -32px;
+}
+
+.db-zz-row-right .db-zz-circle-wrap {
+  margin-right: -32px;
+}
+
+/* Outer 3D Halo Ring */
+.db-zz-outer-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid;
+  opacity: 0.85;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.28s ease;
+}
+
+.db-zz-card:hover .db-zz-outer-ring {
+  transform: scale(1.06);
+}
+
+/* Inner Solid Badge */
+.db-zz-inner-circle {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ffffff;
+  text-align: center;
+}
+
+.db-zz-step-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1px;
+  opacity: 0.95;
+}
+
+.db-zz-step-num {
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   5. CHEVRON ARROW POINTER (DATA A / DATA B)
+   -------------------------------------------------------------------------- */
+.db-zz-chevron {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 86px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.28s ease;
+}
+
+.db-zz-card:hover .db-zz-chevron {
+  transform: scaleX(1.04);
+}
+
+/* Left-Row Chevron: Points Right */
+.db-zz-row-left .db-zz-chevron {
+  margin-left: -20px;
+  padding-left: 24px;
+  padding-right: 18px;
+  justify-content: flex-start;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Right-Row Chevron: Points Left */
+.db-zz-row-right .db-zz-chevron {
+  margin-right: -20px;
+  padding-right: 24px;
+  padding-left: 18px;
+  justify-content: flex-end;
+  clip-path: polygon(14px 0, 100% 0, 100% 100%, 14px 100%, 0 50%);
+  border-radius: 4px 0 0 4px;
+}
+
+/* Small Connector Dot at the Chevron Tip */
+.db-zz-connector-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.db-zz-row-left .db-zz-connector-dot {
+  right: -18px;
+  top: calc(50% - 6px);
+}
+
+.db-zz-row-right .db-zz-connector-dot {
+  left: -18px;
+  top: calc(50% - 6px);
+}
+
+/* --------------------------------------------------------------------------
+   6. 6 THEMATIC COLOR PALETTES (DIGITAL BULL BRAND MATCHED)
+   -------------------------------------------------------------------------- */
+/* Step 01: Cyan / Digital Blue (#0284c7) */
+.db-zz-theme-cyan .db-zz-outer-ring { border-color: #38bdf8; }
+.db-zz-theme-cyan .db-zz-inner-circle { background: #0284c7; }
+.db-zz-theme-cyan .db-zz-chevron { background: #0284c7; }
+.db-zz-theme-cyan .db-zz-connector-dot { border-color: #0284c7; }
+.db-zz-theme-cyan .db-zz-icon { color: #0284c7; background: #e0f2fe; }
+
+/* Step 02: Amber / Golden Orange (#ea580c / #f59e0b) */
+.db-zz-theme-amber .db-zz-outer-ring { border-color: #fde047; }
+.db-zz-theme-amber .db-zz-inner-circle { background: #f59e0b; }
+.db-zz-theme-amber .db-zz-chevron { background: #ea580c; }
+.db-zz-theme-amber .db-zz-connector-dot { border-color: #f59e0b; }
+.db-zz-theme-amber .db-zz-icon { color: #d97706; background: #fef3c7; }
+
+/* Step 03: Purple / Magenta (#9333ea / #7c3aed) */
+.db-zz-theme-purple .db-zz-outer-ring { border-color: #c084fc; }
+.db-zz-theme-purple .db-zz-inner-circle { background: #7c3aed; }
+.db-zz-theme-purple .db-zz-chevron { background: #6d28d9; }
+.db-zz-theme-purple .db-zz-connector-dot { border-color: #7c3aed; }
+.db-zz-theme-purple .db-zz-icon { color: #7c3aed; background: #ede9fe; }
+
+/* Step 04: Fresh Emerald / Lime Green (#10b981 / #16a34a) */
+.db-zz-theme-green .db-zz-outer-ring { border-color: #a3e635; }
+.db-zz-theme-green .db-zz-inner-circle { background: #16a34a; }
+.db-zz-theme-green .db-zz-chevron { background: #15803d; }
+.db-zz-theme-green .db-zz-connector-dot { border-color: #16a34a; }
+.db-zz-theme-green .db-zz-icon { color: #16a34a; background: #dcfce7; }
+
+/* Step 05: Crimson Brand Red (#ea262a) */
+.db-zz-theme-red .db-zz-outer-ring { border-color: #fca5a5; }
+.db-zz-theme-red .db-zz-inner-circle { background: #ea262a; }
+.db-zz-theme-red .db-zz-chevron { background: #dc2626; }
+.db-zz-theme-red .db-zz-connector-dot { border-color: #ea262a; }
+.db-zz-theme-red .db-zz-icon { color: #ea262a; background: #fee2e2; }
+
+/* Step 06: Deep Brand Navy (#00275b) */
+.db-zz-theme-navy .db-zz-outer-ring { border-color: #60a5fa; }
+.db-zz-theme-navy .db-zz-inner-circle { background: #00275b; }
+.db-zz-theme-navy .db-zz-chevron { background: #04142e; }
+.db-zz-theme-navy .db-zz-connector-dot { border-color: #00275b; }
+.db-zz-theme-navy .db-zz-icon { color: #00275b; background: #dbeafe; }
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-zigzag-svg-canvas {
+    display: none;
+  }
+  .db-zigzag-steps-wrap {
+    gap: 1.85rem;
+  }
+  .db-zz-row-left,
+  .db-zz-row-right {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+  .db-zz-row-right .db-zz-pill {
+    flex-direction: row;
+    padding-left: 1.65rem;
+    padding-right: 2.25rem;
+  }
+  .db-zz-row-right .db-zz-content {
+    text-align: left;
+  }
+  .db-zz-row-right .db-zz-card {
+    flex-direction: row;
+  }
+  .db-zz-row-right .db-zz-circle-wrap {
+    margin-left: -32px;
+    margin-right: 0;
+  }
+  .db-zz-row-right .db-zz-chevron {
+    margin-left: -20px;
+    margin-right: 0;
+    padding-left: 24px;
+    padding-right: 18px;
+    justify-content: flex-start;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+    border-radius: 0 4px 4px 0;
+  }
+  .db-zz-row-right .db-zz-connector-dot {
+    right: -18px;
+    left: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-dm-hero {
+    padding: 2.75rem 0;
+  }
+  .db-dm-hero-title {
+    font-size: 1.85rem;
+  }
+  .db-dm-section {
+    padding: 2.75rem 0 3.75rem 0;
+  }
+  .db-dm-desc {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .db-zz-pill {
+    border-radius: 24px;
+    padding: 1.15rem 1.15rem;
+  }
+  .db-zz-row-left .db-zz-pill,
+  .db-zz-row-right .db-zz-pill {
+    padding-right: 1.25rem;
+    gap: 0.85rem;
+  }
+  .db-zz-circle-wrap {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    margin-left: -24px !important;
+  }
+  .db-zz-inner-circle {
+    width: 48px;
+    height: 48px;
+  }
+  .db-zz-step-num {
+    font-size: 0.95rem;
+  }
+  .db-zz-chevron {
+    flex: 0 0 70px;
+    height: 32px;
+    font-size: 0.65rem;
+    margin-left: -14px !important;
+    padding-left: 18px !important;
+  }
+  .db-zz-icon {
+    display: none;
+  }
+}
+

@@ -1,0 +1,766 @@
+/* ==========================================================================
+   DIGITAL BULL — ABOUT US PAGE STYLES (SCREENSHOT MATCHED)
+   Clean, Modular, 100% Isolated to About Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BREADCRUMB / HERO BANNER SECTION (SCREENSHOT MATCHED WITH RICH GRAPHICS)
+   -------------------------------------------------------------------------- */
+.db-about-hero {
+  position: relative;
+  background-color: #04142e;
+  background-image: url('../img/about-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6.2vw, 5.25rem) 0 clamp(3.2rem, 5.8vw, 4.8rem) 0;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(234, 38, 42, 0.35);
+  box-shadow: inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* Subtle Vignette & Central Ambient Glow */
+.db-about-hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 38, 42, 0.15) 0%, rgba(56, 189, 248, 0.12) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.db-about-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-about-hero-title {
+  font-size: clamp(2.35rem, 4.2vw, 3.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  text-shadow: 0 3px 14px rgba(4, 20, 46, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.db-about-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.935rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  list-style: none;
+  background: rgba(4, 20, 46, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+}
+
+.db-about-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-about-breadcrumb a:hover {
+  color: #ea262a;
+}
+
+.db-about-breadcrumb .db-bc-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+.db-about-breadcrumb .db-bc-active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. SHARED SECTION STYLES & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+.db-about-section {
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 0.975rem;
+  line-height: 1.72;
+}
+
+.db-about-section p {
+  color: #000000;
+  font-size: 0.965rem;
+  line-height: 1.74;
+  margin-bottom: 1.25rem;
+}
+
+.db-about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Eyebrow Label with Dual Red-Navy Horizontal Accent Lines */
+.db-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.db-about-eyebrow-text {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.db-about-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 3px;
+}
+
+.db-about-eyebrow-lines .db-line-navy {
+  width: 26px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-about-eyebrow-lines .db-line-red {
+  width: 48px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+/* Section Main Heading */
+.db-about-main-heading {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #00275b;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. ILLUSTRATION & IMAGE MEDIA BOXES (PNG / VECTOR ASSETS)
+   -------------------------------------------------------------------------- */
+.db-about-graphic-box {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: transform 0.35s ease;
+}
+
+.db-about-graphic-box img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.db-about-graphic-box .db-about-bulb-img {
+  max-height: 440px;
+  background-color: #ffffff;
+}
+
+.db-about-graphic-box:hover {
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   4. 3D FOLDED CHEVRON RIBBON INFOGRAPHIC CARDS (MISSION / VISION / HOW WE DO IT)
+   Screenshot Matched to user reference (media_1793600574669_69f5a5c5.jpg)
+   -------------------------------------------------------------------------- */
+.db-infographic-section-wrap {
+  background-color: #ffffff;
+  padding: 4.5rem 4rem;
+  border-radius: 14px;
+  margin: 4.5rem 0;
+}
+
+.db-infographic-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.db-info-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.09), 0 3px 8px rgba(15, 23, 42, 0.04);
+  position: relative;
+  min-height: 155px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.db-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(15, 23, 42, 0.06);
+  border-color: #cbd5e1;
+}
+
+.db-info-card-body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  padding: 1.85rem 2rem 1.85rem 2.75rem;
+  min-width: 0;
+}
+
+/* Circular Letter Badge (A, B, C) */
+.db-info-badge {
+  width: 66px;
+  height: 66px;
+  min-width: 66px;
+  border-radius: 50%;
+  border: 2.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Content Area */
+.db-info-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.db-info-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.db-info-text {
+  font-size: 0.985rem;
+  color: #555555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Infographic Icon (Lightbulb, Gear, Target) */
+.db-info-icon {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem 0 1.25rem;
+  flex-shrink: 0;
+}
+
+.db-info-icon svg {
+  width: 52px;
+  height: 52px;
+  display: block;
+}
+
+/* 3D Folded Ribbon Chevron Arrow Container */
+.db-info-ribbon-arrow {
+  width: 165px;
+  min-width: 165px;
+  height: 192px;
+  position: relative;
+  margin-top: -18px;
+  margin-bottom: -18px;
+  margin-right: -28px;
+  flex-shrink: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.db-info-ribbon-arrow svg.db-ribbon-svg {
+  width: 165px;
+  height: 192px;
+  display: block;
+  overflow: visible;
+}
+
+/* Color Theme - Card A: Teal */
+.db-info-card-a .db-info-badge {
+  border-color: #338f9f;
+  color: #338f9f;
+}
+
+.db-info-card-a .db-info-title {
+  color: #276e7d;
+}
+
+.db-info-card-a .db-info-icon {
+  color: #338f9f;
+}
+
+/* Color Theme - Card B: Amber Orange */
+.db-info-card-b .db-info-badge {
+  border-color: #e49335;
+  color: #e49335;
+}
+
+.db-info-card-b .db-info-title {
+  color: #bf741f;
+}
+
+.db-info-card-b .db-info-icon {
+  color: #e49335;
+}
+
+/* Color Theme - Card C: Brand Coral Red */
+.db-info-card-c .db-info-badge {
+  border-color: #e04635;
+  color: #e04635;
+}
+
+.db-info-card-c .db-info-title {
+  color: #c03121;
+}
+
+.db-info-card-c .db-info-icon {
+  color: #e04635;
+}
+
+/* --------------------------------------------------------------------------
+   5. 3D FOLDED ORIGAMI PINWHEEL INFOGRAPHIC (WEB DEV / ASP.NET / APP DEV)
+   Matched to user reference (media_1793603365228_474b31ac.jpg)
+   -------------------------------------------------------------------------- */
+.db-origami-wheel-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.db-origami-wheel-img,
+.db-origami-wheel-svg {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 34px rgba(0, 0, 0, 0.09));
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.db-origami-wheel-img:hover,
+.db-origami-wheel-svg:hover {
+  transform: translateY(-4px) scale(1.015);
+  filter: drop-shadow(0 18px 42px rgba(0, 0, 0, 0.12));
+}
+
+.db-origami-piece,
+.db-origami-petal {
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.db-origami-piece:hover,
+.db-origami-petal:hover {
+  opacity: 0.96;
+}
+
+/* --------------------------------------------------------------------------
+   6. WHY WE'RE THE RIGHT CHOICE SECTION (Faceted Banner Cards matching reference)
+   -------------------------------------------------------------------------- */
+.db-about-why-block {
+  margin-top: 3.5rem;
+  padding-top: 2.75rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.db-about-why-block p {
+  font-size: 0.965rem;
+  color: #000000;
+  line-height: 1.76;
+  margin-bottom: 1.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. 2x2 INTERSECTING FRAME LINES CARDS GRID (Matched to User Reference Image)
+   4 Distinct Themes: Blue (Top-Left), Orange (Top-Right), Green (Bottom-Left), Red (Bottom-Right)
+   -------------------------------------------------------------------------- */
+.db-frame-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5.00rem 4rem;
+  margin-top: 2.25rem;
+  padding: 1.5rem 1.25rem 2.5rem 1.5rem;
+}
+
+.db-frame-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.db-frame-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+
+.db-frame-card-inner {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2.15rem 2.25rem 2.25rem 2.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.75);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Intersecting Frame Lines (Image 1 Matched) */
+.db-frame-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.db-fl {
+  position: absolute;
+  border-radius: 1px;
+}
+
+/* Bottom-Left Intersecting Grid */
+.db-fl-v1 {
+  left: -14px;
+  top: -16px;
+  bottom: -22px;
+  width: 2.5px;
+}
+
+.db-fl-v2 {
+  left: -6px;
+  top: 25px;
+  bottom: -14px;
+  width: 2.5px;
+}
+
+.db-fl-h1 {
+  left: -26px;
+  right: 20px;
+  bottom: -14px;
+  height: 2.5px;
+}
+
+.db-fl-h2 {
+  left: -14px;
+  right: 55px;
+  bottom: -6px;
+  height: 2.5px;
+}
+
+/* Top-Right Intersecting Cross */
+.db-fl-tr-h {
+  top: -8px;
+  right: -24px;
+  width: 110px;
+  height: 2.5px;
+}
+
+.db-fl-tr-v {
+  top: -20px;
+  right: -8px;
+  height: 65px;
+  width: 2.5px;
+}
+
+/* Color Themes */
+/* Card 1: Navy/Blue (Top-Left) */
+.db-frame-blue .db-fl {
+  background-color: #00275b;
+}
+
+.db-frame-blue .db-fl-v2,
+.db-frame-blue .db-fl-h2 {
+  background-color: #0284c7;
+}
+
+.db-frame-blue .db-frame-card-title {
+  color: #00275b;
+}
+
+.db-frame-blue .db-frame-card-line {
+  background-color: #00275b;
+}
+
+/* Card 2: Orange/Amber (Top-Right) */
+.db-frame-orange .db-fl {
+  background-color: #ea580c;
+}
+
+.db-frame-orange .db-fl-v2,
+.db-frame-orange .db-fl-h2 {
+  background-color: #f59e0b;
+}
+
+.db-frame-orange .db-frame-card-title {
+  color: #ea580c;
+}
+
+.db-frame-orange .db-frame-card-line {
+  background-color: #ea580c;
+}
+
+/* Card 3: Emerald Green (Bottom-Left) */
+.db-frame-green .db-fl {
+  background-color: #059669;
+}
+
+.db-frame-green .db-fl-v2,
+.db-frame-green .db-fl-h2 {
+  background-color: #10b981;
+}
+
+.db-frame-green .db-frame-card-title {
+  color: #059669;
+}
+
+.db-frame-green .db-frame-card-line {
+  background-color: #059669;
+}
+
+/* Card 4: Crimson Red (Bottom-Right) */
+.db-frame-red .db-fl {
+  background-color: #ea262a;
+}
+
+.db-frame-red .db-fl-v2,
+.db-frame-red .db-fl-h2 {
+  background-color: #f87171;
+}
+
+.db-frame-red .db-frame-card-title {
+  color: #ea262a;
+}
+
+.db-frame-red .db-frame-card-line {
+  background-color: #ea262a;
+}
+
+/* Content Typography */
+.db-frame-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.45rem 0;
+  line-height: 1.3;
+}
+
+.db-frame-card-line {
+  display: block;
+  width: 42px;
+  height: 2.5px;
+  border-radius: 2px;
+  margin-bottom: 0.95rem;
+}
+
+.db-frame-card-desc {
+  font-size: 0.935rem;
+  line-height: 1.74;
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .db-frame-cards-grid {
+    gap: 2.5rem 2rem;
+  }
+
+  .db-frame-card-inner {
+    padding: 1.75rem 1.65rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-frame-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .db-frame-card-inner {
+    padding: 1.5rem 1.35rem;
+  }
+
+  .db-fl-v1,
+  .db-fl-v2 {
+    left: -8px;
+  }
+
+  .db-fl-h1,
+  .db-fl-h2 {
+    left: -14px;
+  }
+
+  .db-fl-tr-h {
+    right: -14px;
+    width: 70px;
+  }
+
+  .db-fl-tr-v {
+    right: -6px;
+    height: 50px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE DESIGN FOR ABOUT PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-about-section {
+    padding: 3rem 0;
+  }
+
+  .db-about-main-heading {
+    font-size: 2.15rem;
+  }
+
+  .db-infographic-section-wrap {
+    padding: 3rem 2.25rem;
+    margin: 3rem 0;
+  }
+
+  .db-infographic-cards-stack {
+    gap: 2rem;
+  }
+
+  .db-about-graphic-box {
+    margin-bottom: 2rem;
+  }
+
+  .db-info-card-body {
+    padding: 1.5rem 1.35rem;
+    gap: 1.35rem;
+  }
+
+  .db-info-icon {
+    margin: 0 0.5rem;
+  }
+
+  .db-info-ribbon-arrow {
+    width: 140px;
+    min-width: 140px;
+    height: 165px;
+    margin-right: -20px;
+  }
+
+  /* Reversed on mobile for 2nd illustration */
+  .order-lg-2 {
+    order: 1 !important;
+  }
+
+  .order-lg-1 {
+    order: 2 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-about-hero {
+    padding: 2.5rem 0;
+  }
+
+  .db-about-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .db-about-main-heading {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .db-about-graphic-box {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .db-infographic-section-wrap {
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .db-info-card {
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+  }
+
+  .db-info-card-a {
+    border-top: 4px solid #338f9f;
+  }
+
+  .db-info-card-b {
+    border-top: 4px solid #e49335;
+  }
+
+  .db-info-card-c {
+    border-top: 4px solid #e04635;
+  }
+
+  .db-info-card-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+    gap: 0.85rem;
+  }
+
+  .db-info-icon {
+    display: none;
+  }
+
+  .db-info-ribbon-arrow {
+    display: none;
+  }
+
+  .db-about-why-block {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+}

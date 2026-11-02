@@ -97,7 +97,7 @@
                                 </a>
                                 <ul class="db-dropdown-menu">
                                     <li>
-                                        <a href="#db-services" class="db-dropdown-item">
+                                        <a href="digital-marketing.aspx" class="db-dropdown-item">
                                             <div class="db-dropdown-item-icon">
                                                 <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                                             </div>
@@ -108,29 +108,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Search Engine Optimization (SEO)</span>
-                                                <span class="db-dropdown-item-desc">Organic Google rankings & local maps</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">AI SEO / AEO / GEO</span>
-                                                <span class="db-dropdown-item-desc">Generative search & AI engine visibility</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
+                                        <a href="social-media-marketing.aspx" class="db-dropdown-item">
                                             <div class="db-dropdown-item-icon">
                                                 <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                                             </div>
@@ -143,10 +121,21 @@
                                     <li>
                                         <a href="#db-services" class="db-dropdown-item">
                                             <div class="db-dropdown-item-icon">
+                                                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                                            </div>
+                                            <div class="db-dropdown-item-text">
+                                                <span class="db-dropdown-item-title">Search engine Optimisation OR AIO</span>
+                                                <span class="db-dropdown-item-desc">Organic Google rankings & AI search visibility</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#db-services" class="db-dropdown-item">
+                                            <div class="db-dropdown-item-icon">
                                                 <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
                                             </div>
                                             <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Website & App Development</span>
+                                                <span class="db-dropdown-item-title">Website & app Development</span>
                                                 <span class="db-dropdown-item-desc">High-speed, SEO-ready web engineering</span>
                                             </div>
                                         </a>
@@ -223,11 +212,10 @@
                             <svg class="db-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                         </a>
                         <ul class="db-dropdown-menu">
-                            <li><a href="#db-services" class="db-dropdown-item">Digital Marketing</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Search Engine Optimization (SEO)</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">AI SEO / AEO / GEO</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Social Media Marketing</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Website & App Development</a></li>
+                            <li><a href="digital-marketing.aspx" class="db-dropdown-item">Digital Marketing</a></li>
+                            <li><a href="social-media-marketing.aspx" class="db-dropdown-item">Social Media Marketing</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Search engine Optimisation OR AIO</a></li>
+                            <li><a href="#db-services" class="db-dropdown-item">Website & app Development</a></li>
                             <li><a href="#db-services" class="db-dropdown-item">Software Development</a></li>
                             <li><a href="#db-services" class="db-dropdown-item">Performance Marketing</a></li>
                         </ul>
@@ -320,10 +308,10 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="db-footer-title">Our Services</h4>
                         <ul class="db-footer-links">
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Search Engine Optimization</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Social Media Marketing</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Website & App Development</a></li>
+                            <li><a href="digital-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing</a></li>
+                            <li><a href="social-media-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Social Media Marketing</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Search engine Optimisation OR AIO</a></li>
+                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Website & app Development</a></li>
                             <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Software Development</a></li>
                             <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
                         </ul>

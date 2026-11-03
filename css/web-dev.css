@@ -1,0 +1,658 @@
+/* ==========================================================================
+   DIGITAL BULL — WEBSITE & APP DEVELOPMENT PAGE STYLES
+   Matched to user reference (media_1793684295830_8ea9f386.jpg)
+   Clean, Modular, 100% Isolated to Web & App Development Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.db-webdev-hero {
+  position: relative;
+  background-color: #04142e;
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.22) 0%, rgba(4, 20, 46, 0.95) 75%),
+    url('../img/about-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6vw, 5rem) 0 clamp(3.2rem, 5.5vw, 4.5rem) 0;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(234, 38, 42, 0.35);
+  box-shadow: inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.db-webdev-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-webdev-hero-title {
+  font-size: clamp(2rem, 3.8vw, 3.15rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.95rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-shadow: 0 3px 14px rgba(4, 20, 46, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.db-webdev-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.935rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  list-style: none;
+  background: rgba(4, 20, 46, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+}
+
+.db-webdev-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-webdev-breadcrumb a:hover {
+  color: #ea262a;
+}
+
+.db-webdev-bc-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+.db-webdev-bc-active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN CONTENT SECTIONS
+   -------------------------------------------------------------------------- */
+.db-webdev-section {
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0;
+  background-color: #ffffff;
+}
+
+.db-webdev-block {
+  margin-bottom: clamp(5rem, 7vw, 6.75rem);
+}
+
+.db-webdev-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Eyebrow & Horizontal Accent Lines */
+.db-webdev-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.db-webdev-eyebrow-text {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.db-webdev-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 3px;
+}
+
+.db-webdev-eyebrow-lines .db-line-navy {
+  width: 24px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-webdev-eyebrow-lines .db-line-red {
+  width: 44px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+/* Headings */
+.db-webdev-heading {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: #00275b;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+/* Body Paragraphs */
+.db-webdev-desc {
+  font-size: 0.965rem;
+  color: #000000;
+  line-height: 1.76;
+  margin-bottom: 1.25rem;
+}
+
+.db-webdev-desc:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. CHECKLIST STYLING (Red Badges + Typography)
+   -------------------------------------------------------------------------- */
+.db-webdev-subhead {
+  font-size: 0.985rem;
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.db-webdev-subhead-line {
+  flex: 0 0 38px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+/* Checklist Section below Block 1 */
+.db-webdev-checklist-section {
+  margin-top: clamp(4rem, 6vw, 5.5rem);
+}
+
+/* --------------------------------------------------------------------------
+   TARGET & 6 CHEVRON RIBBONS INFOGRAPHIC
+   Matched to user reference (media_1793688702281_9fafd3ca.jpg)
+   -------------------------------------------------------------------------- */
+.db-target-infographic {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1060px;
+  margin: 2.25rem auto 0 auto;
+  position: relative;
+}
+
+.db-target-svg-wrap {
+  flex: 0 0 320px;
+  width: 320px;
+  height: 336px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.db-target-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.db-target-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 336px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border-radius: 4px;
+}
+
+.db-target-bar {
+  flex: 1;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem 0 1.25rem;
+  color: #ffffff;
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 50%, calc(100% - 24px) 100%, 0 100%);
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease, box-shadow 0.25s ease;
+  cursor: default;
+  margin-bottom: 0;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.db-target-bar:hover {
+  transform: translateX(10px);
+  filter: brightness(1.08);
+  z-index: 6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.db-bar-1 { background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%); }
+.db-bar-2 { background: linear-gradient(90deg, #ea580c 0%, #f97316 100%); }
+.db-bar-3 { background: linear-gradient(90deg, #dc2626 0%, #ea262a 100%); }
+.db-bar-4 { background: linear-gradient(90deg, #059669 0%, #10b981 100%); }
+.db-bar-5 { background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%); }
+.db-bar-6 { background: linear-gradient(90deg, #00275b 0%, #1e3a8a 100%); }
+
+.db-bar-num {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  padding-right: 1.15rem;
+  margin-right: 1.15rem;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.db-bar-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.db-bar-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 860px) {
+  .db-target-infographic {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .db-target-svg-wrap {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 270px;
+  }
+
+  .db-target-bars {
+    width: 100%;
+    height: auto;
+    gap: 0.45rem;
+  }
+
+  .db-target-bar {
+    height: auto;
+    min-height: 52px;
+    padding: 0.65rem 1.75rem 0.65rem 1rem;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+  }
+
+  .db-bar-num {
+    font-size: 1.35rem;
+    padding-right: 0.85rem;
+    margin-right: 0.85rem;
+  }
+
+  .db-bar-text {
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+}
+
+.db-webdev-checklist-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem 2.5rem;
+  max-width: 960px;
+  list-style: none;
+  padding: 0;
+  margin: 1.15rem 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .db-webdev-checklist-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.db-webdev-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.db-webdev-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.955rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.db-check-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ea262a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(234, 38, 42, 0.28);
+}
+
+.db-check-badge svg {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. WHY CHOOSE US — 3D QUESTION MARK & CAPSULE CARDS
+   Matched to user reference (media_1793694754895_5923aad7.jpg)
+   -------------------------------------------------------------------------- */
+.db-why-choose-block {
+  margin-bottom: clamp(5rem, 7vw, 6.75rem);
+}
+
+.db-why-choose-header {
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.db-choose-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.65rem;
+}
+
+.db-choose-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-choose-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #00275b 0%, #0284c7 100%);
+  border-radius: 9999px;
+  min-height: 52px;
+  height: auto;
+  padding: 4px 1.65rem 4px 5px;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 8px 22px rgba(0, 39, 91, 0.22);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  cursor: default;
+}
+
+.db-choose-capsule:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 28px rgba(0, 39, 91, 0.32);
+}
+
+.db-choose-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #00275b;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  transition: transform 0.25s ease;
+}
+
+.db-choose-capsule:hover .db-choose-num {
+  transform: scale(1.08);
+}
+
+.db-choose-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(0.92rem, 1.15vw, 1.05rem);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.db-choose-text {
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.65;
+  margin: 0.75rem 0 0 0.5rem;
+  max-width: 540px;
+}
+
+.db-why-choose-svg,
+.db-why-choose-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: none;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.db-why-choose-svg:hover,
+.db-why-choose-img:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 575.98px) {
+  .db-choose-capsule {
+    border-radius: 28px;
+    padding: 6px 1.25rem 6px 5px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9 MUST-HAVE FEATURES — GRADIENT PILL CARDS
+   Matched to user reference (media_1793694418322_a1195918.jpg)
+   -------------------------------------------------------------------------- */
+.db-webdev-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem 1.35rem;
+  margin: 2rem 0 2.25rem 0;
+}
+
+.db-feature-pill {
+  min-height: 58px;
+  height: auto;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 1.25rem 0.45rem 6px;
+  gap: 0.85rem;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  cursor: default;
+}
+
+.db-feature-pill:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+}
+
+.db-feature-icon-pod {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.db-feature-pill:hover .db-feature-icon-pod {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.db-feature-text {
+  flex: 1;
+  font-size: clamp(0.78rem, 0.95vw, 0.88rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+.db-feature-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.db-feature-pill:hover .db-feature-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Digital Bull Logo Brand Gradient Variants (Deep Navy #00275b & Crimson Red #ea262a) */
+.db-pill-navy {
+  background: linear-gradient(135deg, #00275b 0%, #0a3d7d 100%);
+  box-shadow: 0 8px 20px rgba(0, 39, 91, 0.28);
+}
+.db-pill-navy:hover {
+  background: linear-gradient(135deg, #001f48 0%, #00275b 100%);
+  box-shadow: 0 12px 26px rgba(0, 39, 91, 0.38);
+}
+
+.db-pill-red {
+  background: linear-gradient(135deg, #ea262a 0%, #ff4d52 100%);
+  box-shadow: 0 8px 20px rgba(234, 38, 42, 0.28);
+}
+.db-pill-red:hover {
+  background: linear-gradient(135deg, #c71b1f 0%, #ea262a 100%);
+  box-shadow: 0 12px 26px rgba(234, 38, 42, 0.38);
+}
+
+.db-pill-amber   { background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25); }
+.db-pill-cyan    { background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%); box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25); }
+.db-pill-teal    { background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%); box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25); }
+.db-pill-orange  { background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25); }
+.db-pill-indigo  { background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%); box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25); }
+.db-pill-rose    { background: linear-gradient(135deg, #e11d48 0%, #fb7185 100%); box-shadow: 0 8px 20px rgba(225, 29, 72, 0.25); }
+.db-pill-emerald { background: linear-gradient(135deg, #059669 0%, #10b981 100%); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25); }
+
+/* --------------------------------------------------------------------------
+   4. ILLUSTRATION CONTAINERS
+   -------------------------------------------------------------------------- */
+.db-webdev-ill-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+.db-webdev-illustration {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  background-color: transparent;
+  mix-blend-mode: multiply;
+  filter: none;
+  transition: transform 0.3s ease;
+}
+
+.db-webdev-img-lg {
+  max-width: 510px;
+}
+
+.db-webdev-illustration:hover {
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-webdev-section {
+    padding: 3rem 0;
+  }
+
+  .db-webdev-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .db-webdev-ill-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .db-webdev-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-webdev-hero {
+    padding: 2.75rem 0;
+  }
+
+  .db-webdev-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .db-webdev-heading {
+    font-size: 1.5rem;
+  }
+
+  .db-webdev-checklist-grid,
+  .db-webdev-features-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .db-webdev-block {
+    margin-bottom: 2.75rem;
+  }
+}

@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Modular CSS Architecture -->
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="animations/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/global.css?v=3.0" />
+    <link rel="stylesheet" href="css/navbar.css?v=3.0" />
+    <link rel="stylesheet" href="css/footer.css?v=3.0" />
+    <link rel="stylesheet" href="animations/animations.css?v=3.0" />
+    <link rel="stylesheet" href="css/responsive.css?v=3.0" />
 
     <!-- Page Specific Stylesheet PlaceHolder -->
     <asp:ContentPlaceHolder ID="StylesheetsContent" runat="server">
@@ -96,72 +96,12 @@
                                     <svg class="db-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
                                 </a>
                                 <ul class="db-dropdown-menu">
-                                    <li>
-                                        <a href="digital-marketing.aspx" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Digital Marketing</span>
-                                                <span class="db-dropdown-item-desc">360° strategic growth & lead generation</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="social-media-marketing.aspx" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Social Media Marketing</span>
-                                                <span class="db-dropdown-item-desc">Brand awareness & engagement campaigns</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Search engine Optimisation OR AIO</span>
-                                                <span class="db-dropdown-item-desc">Organic Google rankings & AI search visibility</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Website & app Development</span>
-                                                <span class="db-dropdown-item-desc">High-speed, SEO-ready web engineering</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Software Development</span>
-                                                <span class="db-dropdown-item-desc">Custom enterprise & CRM business tools</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#db-services" class="db-dropdown-item">
-                                            <div class="db-dropdown-item-icon">
-                                                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-                                            </div>
-                                            <div class="db-dropdown-item-text">
-                                                <span class="db-dropdown-item-title">Performance Marketing</span>
-                                                <span class="db-dropdown-item-desc">Google Ads & Meta Paid Advertising</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    <li><a href="digital-marketing.aspx" class="db-dropdown-item">Digital Marketing</a></li>
+                                    <li><a href="social-media-marketing.aspx" class="db-dropdown-item">Social Media Marketing</a></li>
+                                    <li><a href="seo.aspx" class="db-dropdown-item">Search engine Optimisation OR AIO</a></li>
+                                    <li><a href="website-development.aspx" class="db-dropdown-item">Website & app Development</a></li>
+                                    <li><a href="software-development.aspx" class="db-dropdown-item">Software Development</a></li>
+                                    <li><a href="performance-marketing.aspx" class="db-dropdown-item">Performance Marketing</a></li>
                                 </ul>
                             </li>
                             <li class="db-nav-item">
@@ -196,52 +136,85 @@
                     </button>
                 </nav>
             </div>
+        </header>
 
-            <!-- Mobile Navigation Overlay -->
-            <div class="db-nav-collapse d-lg-none" id="dbMobileNav">
-                <ul class="db-nav-menu">
-                    <li class="db-nav-item">
-                        <a href="index.aspx" class="db-nav-link active">Home</a>
+        <!-- Mobile Sidebar Backdrop -->
+        <div class="db-sidebar-backdrop" id="dbSidebarBackdrop"></div>
+
+        <!-- Mobile Off-Canvas Navigation Sidebar -->
+        <aside class="db-mobile-sidebar" id="dbMobileSidebar" aria-label="Mobile Navigation Sidebar">
+            <!-- Sidebar Header with Logo and Close Button -->
+            <div class="db-sidebar-header">
+                <a href="index.aspx" class="db-sidebar-brand" aria-label="Digital Bull Home">
+                    <img src="assets/LOGO.png" alt="Digital Bull Logo" height="36" />
+                </a>
+                <button type="button" class="db-sidebar-close" id="dbSidebarClose" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Quick Contact Strip inside Sidebar -->
+            <div class="db-sidebar-contact">
+                <a href="tel:+919044815507" class="db-sidebar-contact-item">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+91-9044815507</span>
+                </a>
+                <a href="mailto:helpdigitalbulls@gmail.com" class="db-sidebar-contact-item">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>helpdigitalbulls@gmail.com</span>
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="db-sidebar-body">
+                <ul class="db-sidebar-menu">
+                    <li class="db-sidebar-item">
+                        <a href="index.aspx" class="db-sidebar-link active">Home</a>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="about.aspx" class="db-nav-link">About</a>
+                    <li class="db-sidebar-item">
+                        <a href="about.aspx" class="db-sidebar-link">About</a>
                     </li>
-                    <li class="db-nav-item dropdown">
-                        <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false">
+                    <li class="db-sidebar-item db-sidebar-dropdown" id="dbSidebarServices">
+                        <button type="button" class="db-sidebar-link db-dropdown-trigger" aria-expanded="false">
                             <span>Service</span>
-                            <svg class="db-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-                        </a>
-                        <ul class="db-dropdown-menu">
-                            <li><a href="digital-marketing.aspx" class="db-dropdown-item">Digital Marketing</a></li>
-                            <li><a href="social-media-marketing.aspx" class="db-dropdown-item">Social Media Marketing</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Search engine Optimisation OR AIO</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Website & app Development</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Software Development</a></li>
-                            <li><a href="#db-services" class="db-dropdown-item">Performance Marketing</a></li>
+                            <svg class="db-sidebar-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <ul class="db-sidebar-sub">
+                            <li><a href="digital-marketing.aspx" class="db-sub-link">Digital Marketing</a></li>
+                            <li><a href="social-media-marketing.aspx" class="db-sub-link">Social Media Marketing</a></li>
+                            <li><a href="seo.aspx" class="db-sub-link">Search engine Optimisation OR AIO</a></li>
+                            <li><a href="website-development.aspx" class="db-sub-link">Website & app Development</a></li>
+                            <li><a href="software-development.aspx" class="db-sub-link">Software Development</a></li>
+                            <li><a href="performance-marketing.aspx" class="db-sub-link">Performance Marketing</a></li>
                         </ul>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="#db-work" class="db-nav-link">Portfolio</a>
+                    <li class="db-sidebar-item">
+                        <a href="index.aspx#db-work" class="db-sidebar-link">Portfolio</a>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="blog.aspx" class="db-nav-link">Blog</a>
+                    <li class="db-sidebar-item">
+                        <a href="blog.aspx" class="db-sidebar-link">Blog</a>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="pricing.aspx" class="db-nav-link">Plan</a>
+                    <li class="db-sidebar-item">
+                        <a href="pricing.aspx" class="db-sidebar-link">Plan</a>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="career.aspx" class="db-nav-link">Career</a>
+                    <li class="db-sidebar-item">
+                        <a href="career.aspx" class="db-sidebar-link">Career</a>
                     </li>
-                    <li class="db-nav-item">
-                        <a href="#db-contact" class="db-nav-link">Contact</a>
+                    <li class="db-sidebar-item">
+                        <a href="index.aspx#db-contact" class="db-sidebar-link">Contact</a>
                     </li>
                 </ul>
-                <div class="db-header-cta d-flex gap-2">
-                    <a href="#db-contact" class="db-btn-nav-primary flex-grow-1 text-center">Free Demo</a>
-                    <a href="login.aspx" class="db-btn-nav-primary flex-grow-1 text-center">Login</a>
-                </div>
             </div>
-        </header>
+
+            <!-- Sidebar Footer CTA Buttons -->
+            <div class="db-sidebar-footer">
+                <a href="index.aspx#db-contact" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-demo text-center">Free Demo</a>
+                <a href="login.aspx" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-login text-center">Login</a>
+            </div>
+        </aside>
 
         <!-- Main Body Content Area -->
         <main id="main-content" class="db-main" role="main">
@@ -310,10 +283,10 @@
                         <ul class="db-footer-links">
                             <li><a href="digital-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing</a></li>
                             <li><a href="social-media-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Social Media Marketing</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Search engine Optimisation OR AIO</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Website & app Development</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Software Development</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
+                            <li><a href="seo.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Search engine Optimisation OR AIO</a></li>
+                            <li><a href="website-development.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Website & app Development</a></li>
+                            <li><a href="software-development.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Software Development</a></li>
+                            <li><a href="performance-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
                         </ul>
                     </div>
 
@@ -322,11 +295,11 @@
                         <h4 class="db-footer-title">We Offer</h4>
                         <ul class="db-footer-links">
                             <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Digital Marketing Training</a></li>
-                            <li><a href="#db-services"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
+                            <li><a href="performance-marketing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Performance Marketing</a></li>
                             <li><a href="#db-reviews"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Client Reviews</a></li>
                             <li><a href="pricing.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Pricing Plans</a></li>
                             <li><a href="blog.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Latest Blogs</a></li>
-                            <li><a href="#db-contact"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Career & Opportunities</a></li>
+                            <li><a href="career.aspx"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>Career & Opportunities</a></li>
                         </ul>
                     </div>
                 </div>
@@ -368,9 +341,9 @@
 
     <!-- Core Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/main.js"></script>
-    <script src="animations/scroll-animation.js"></script>
+    <script src="js/navbar.js?v=3.0"></script>
+    <script src="js/main.js?v=3.0"></script>
+    <script src="animations/scroll-animation.js?v=3.0"></script>
 
     <!-- Page Specific Script PlaceHolder -->
     <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">

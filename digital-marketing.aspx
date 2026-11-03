@@ -1,8 +1,8 @@
-<%@ Page Title="Digital Marketing with Growth | Digital Bull™ - Leading Digital Marketing Agency" Language="C#"
+<%@ Page Title="Digital Marketing with Growth | Digital Bull - Leading Digital Marketing Agency" Language="C#"
     MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="digital-marketing.aspx.cs" Inherits="DigitalMarketing" %>
 
     <asp:Content ID="HeadContent" ContentPlaceHolderID="head" Runat="Server">
-        <title>Digital Marketing with Growth | Digital Bull™ - Leading Agency</title>
+        <title>Digital Marketing with Growth | Digital Bull - Leading Agency</title>
         <meta name="description"
             content="Power your business growth with smart digital marketing from Digital Bull. Performance marketing, SEO, social media, lead generation, and analytics." />
         <meta name="keywords"
@@ -24,13 +24,6 @@
         <section class="db-dm-hero" aria-label="Digital Marketing Header">
             <div class="container db-dm-hero-inner">
                 <h1 class="db-dm-hero-title mb-0">Digital Marketing with Growth</h1>
-                <ul class="db-dm-breadcrumb mt-3" aria-label="Breadcrumb">
-                    <li><a href="index.aspx">Home</a></li>
-                    <li class="db-dm-bc-sep" aria-hidden="true">/</li>
-                    <li><a href="#db-services">Pages</a></li>
-                    <li class="db-dm-bc-sep" aria-hidden="true">/</li>
-                    <li class="db-dm-bc-active" aria-current="page">Digital Marketing with Growth</li>
-                </ul>
             </div>
         </section>
 

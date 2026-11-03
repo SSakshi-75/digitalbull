@@ -1,0 +1,930 @@
+/* ==========================================================================
+   DIGITAL BULL — SEO / AIO PAGE STYLES
+   Matched to user reference (media_1793682753089_8b71bedf.jpg)
+   Clean, Modular, 100% Isolated to SEO & AIO Services Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.db-seo-hero {
+  position: relative;
+  background-color: #04142e;
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.22) 0%, rgba(4, 20, 46, 0.95) 75%),
+    url('../img/about-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6vw, 5rem) 0 clamp(3.2rem, 5.5vw, 4.5rem) 0;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(234, 38, 42, 0.35);
+  box-shadow: inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.db-seo-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-seo-hero-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.95rem;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-shadow: 0 3px 14px rgba(4, 20, 46, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.db-seo-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.935rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  list-style: none;
+  background: rgba(4, 20, 46, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+}
+
+.db-seo-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-seo-breadcrumb a:hover {
+  color: #ea262a;
+}
+
+.db-seo-breadcrumb .db-seo-bc-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+.db-seo-breadcrumb .db-seo-bc-active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN SEO & AIO CONTENT SECTION
+   -------------------------------------------------------------------------- */
+.db-seo-section {
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0 clamp(4.5rem, 6.5vw, 6rem) 0;
+  background-color: #ffffff;
+}
+
+/* Section Eyebrow with Dual Red-Navy Horizontal Accent Lines */
+.db-seo-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.db-seo-eyebrow-text {
+  font-size: clamp(0.95rem, 1.35vw, 1.15rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.db-seo-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 3px;
+}
+
+.db-seo-eyebrow-lines .db-line-navy {
+  width: 26px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-seo-eyebrow-lines .db-line-red {
+  width: 48px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+.db-seo-desc {
+  font-size: 0.965rem;
+  color: #000000;
+  line-height: 1.76;
+  margin-bottom: 3.25rem;
+  max-width: 1140px;
+}
+
+.db-seo-offer-heading {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 800;
+  color: #00275b;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.015em;
+}
+
+/* Section Divider separating SEO and AIO sections */
+.db-seo-block-divider {
+  margin-top: clamp(4rem, 6vw, 5.5rem);
+  padding-top: clamp(3.5rem, 5vw, 4.5rem);
+  border-top: 1px solid #e2e8f0;
+}
+
+/* --------------------------------------------------------------------------
+   3. SERVICE FEATURE CARDS GRID (3 Columns × 2 Rows & 3 Columns × 1 Row)
+   Matched to user reference (media_1793682753089_8b71bedf.jpg)
+   -------------------------------------------------------------------------- */
+.db-seo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.db-seo-card {
+  border-radius: 14px;
+  padding: 2.25rem 1.85rem 2.25rem 1.85rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  position: relative;
+}
+
+.db-seo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+}
+
+.db-seo-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.35rem;
+  line-height: 1.35;
+}
+
+.db-seo-card-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.35rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.db-seo-card:hover .db-seo-card-icon {
+  transform: scale(1.08);
+}
+
+.db-seo-card-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.db-seo-card-desc {
+  font-size: 0.885rem;
+  color: #334155;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. PASTEL COLOR THEMES (MATCHED TO REFERENCE IMAGE)
+   -------------------------------------------------------------------------- */
+/* Soft Rose / Pink Theme */
+.db-card-pink {
+  background-color: #fce7f3;
+}
+
+/* Soft Amber / Golden Yellow Theme */
+.db-card-yellow {
+  background-color: #fef3c7;
+}
+
+/* Soft Mint / Light Emerald Green Theme */
+.db-card-green {
+  background-color: #dcfce7;
+}
+
+/* Soft Sky / Cyan Blue Theme (AIO Card 1) */
+.db-card-cyan {
+  background-color: #bae6fd;
+}
+
+/* Soft Sage / Mint Cyan Theme (AIO Card 2) */
+.db-card-mint {
+  background-color: #ccfbf1;
+}
+
+/* Soft Coral / Peach Theme (AIO Card 3) */
+.db-card-peach {
+  background-color: #fed7aa;
+}
+
+/* --------------------------------------------------------------------------
+   5. INFOGRAPHIC 6-BRANCH TREE DIAGRAM (Matched to user reference)
+   -------------------------------------------------------------------------- */
+.db-seo-tree-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Central Hub Column */
+.db-seo-tree-hub-col {
+  flex: 0 0 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-seo-tree-hub-wrap {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-hub-arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.db-seo-tree-hub {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f8fafc 55%, #e2e8f0 100%);
+  box-shadow:
+    0 12px 32px rgba(15, 23, 42, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.06),
+    inset 0 3px 5px rgba(255, 255, 255, 0.95),
+    0 0 0 4px #ffffff,
+    0 0 0 6px #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.db-seo-tree-hub:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.16),
+    inset 0 3px 5px rgba(255, 255, 255, 0.95),
+    0 0 0 4px #ffffff,
+    0 0 0 7px #ea262a;
+}
+
+.db-seo-hub-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-seo-hub-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.35rem;
+}
+
+.db-seo-hub-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.db-seo-hub-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #00275b;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.db-seo-hub-sub {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ea262a;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+/* Connector Lines SVG */
+.db-seo-tree-connectors {
+  flex: 0 0 110px;
+  width: 110px;
+  height: 584px;
+  position: relative;
+}
+
+.db-seo-tree-connectors svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Ribbons Stack Column */
+.db-seo-tree-ribbons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.db-seo-tree-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 84px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.db-seo-tree-row:hover {
+  transform: translateX(6px);
+}
+
+/* Circular Node Badge */
+.db-tree-node {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f8fafc 65%, #e2e8f0 100%);
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.14),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    inset 0 2px 4px rgba(255, 255, 255, 0.95),
+    0 0 0 3px #ffffff,
+    0 0 0 5px #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.db-seo-tree-row:hover .db-tree-node {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.18),
+    inset 0 2px 4px rgba(255, 255, 255, 0.95),
+    0 0 0 3px #ffffff,
+    0 0 0 6px rgba(0, 39, 91, 0.4);
+}
+
+.db-tree-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Ribbon Banner Body */
+.db-tree-ribbon {
+  flex: 1;
+  margin-left: 35px;
+  /* Half of circle hangs off the left edge */
+  min-height: 84px;
+  padding: 0.85rem 38px 0.85rem 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: polygon(0% 0%, calc(100% - 24px) 0%, 100% 50%, calc(100% - 24px) 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, calc(100% - 24px) 0%, 100% 50%, calc(100% - 24px) 100%, 0% 100%);
+  border-radius: 6px 0 0 6px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.db-ribbon-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.db-ribbon-desc {
+  font-size: 0.865rem;
+  line-height: 1.48;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 6 Ribbon Color Gradients Matched to Image & Digital Bull */
+/* 1. Royal Blue */
+.db-ribbon-blue {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+}
+
+/* 2. Ocean Teal */
+.db-ribbon-teal {
+  background: linear-gradient(90deg, #0891b2 0%, #06b6d4 100%);
+}
+
+/* 3. Royal Purple */
+.db-ribbon-purple {
+  background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 100%);
+}
+
+/* 4. Digital Bull Red */
+.db-ribbon-red {
+  background: linear-gradient(90deg, #b91c1c 0%, #ea262a 100%);
+}
+
+/* 5. Sunset Orange */
+.db-ribbon-orange {
+  background: linear-gradient(90deg, #c2410c 0%, #ea580c 100%);
+}
+
+/* 6. Golden Amber */
+.db-ribbon-amber {
+  background: linear-gradient(90deg, #b45309 0%, #d97706 100%);
+}
+
+/* --------------------------------------------------------------------------
+   6. AIO 3-STEP INFOGRAPHIC (Matched to user reference)
+   -------------------------------------------------------------------------- */
+.db-aio-infographic {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+/* Central Hub Column (Left) */
+.db-aio-hub-col {
+  flex: 0 0 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-aio-hub {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #fafbfc 65%, #f1f5f9 100%);
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.09),
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    inset 0 3px 6px rgba(255, 255, 255, 0.95),
+    0 0 0 6px #ffffff,
+    0 0 0 8px #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.db-aio-hub:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 20px 44px rgba(15, 23, 42, 0.13),
+    inset 0 3px 6px rgba(255, 255, 255, 0.95),
+    0 0 0 6px #ffffff,
+    0 0 0 8px #cbd5e1;
+}
+
+.db-aio-hub-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.db-aio-hub-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-aio-hub-step {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.15;
+}
+
+.db-aio-hub-main {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.db-aio-hub-sub {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ea262a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.db-aio-hub-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.db-aio-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+}
+
+.db-dot-yellow {
+  background-color: #f59e0b;
+}
+
+.db-dot-coral {
+  background-color: #fb923c;
+}
+
+.db-dot-pink {
+  background-color: #f43f5e;
+}
+
+/* Steps Stack Column (Right) */
+.db-aio-steps-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.db-aio-step-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.db-aio-step-row:hover {
+  transform: translateX(4px);
+}
+
+/* Staggered offsets matching Image 1 */
+.db-aio-row-1 {
+  margin-left: 0;
+}
+
+.db-aio-row-2 {
+  margin-left: 55px;
+  /* Shifted right */
+}
+
+.db-aio-row-3 {
+  margin-left: 15px;
+}
+
+/* Connector Lines */
+.db-aio-line {
+  height: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.db-aio-line-1 {
+  width: 90px;
+  background-color: #fcd34d;
+}
+
+.db-aio-line-2 {
+  width: 145px;
+  background-color: #fb923c;
+}
+
+.db-aio-line-3 {
+  width: 80px;
+  background-color: #f43f5e;
+}
+
+/* Step Node (Double Circles) */
+.db-aio-node-wrap {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Backdrop colored offset circle */
+.db-aio-node-backdrop {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.db-backdrop-yellow {
+  background-color: #fef08a;
+}
+
+.db-backdrop-coral {
+  background-color: #fed7aa;
+}
+
+.db-backdrop-pink {
+  background-color: #fecdd3;
+}
+
+/* Delicate dashed arc outside backdrop */
+.db-aio-dashed-arc {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 86px;
+  height: 86px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Front white circle badge with icon */
+.db-aio-node-front {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f8fafc 70%, #f1f5f9 100%);
+  box-shadow:
+    0 8px 22px rgba(15, 23, 42, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    0 0 0 2px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.db-aio-step-row:hover .db-aio-node-front {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.16),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    0 0 0 3px #00275b;
+}
+
+.db-aio-icon {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+/* Step Number */
+.db-aio-num {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #0f172a;
+  margin: 0 1.25rem 0 1rem;
+  flex-shrink: 0;
+  line-height: 1;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Content block (Heading + Text) */
+.db-aio-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.db-aio-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #00275b;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.db-aio-desc {
+  font-size: 0.885rem;
+  line-height: 1.62;
+  color: #000000;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-seo-tree-wrapper {
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .db-seo-tree-hub-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .db-seo-tree-connectors {
+    display: none;
+  }
+
+  .db-seo-tree-ribbons {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .db-aio-infographic {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .db-aio-hub-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .db-aio-steps-col {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .db-aio-step-row {
+    margin-left: 0 !important;
+  }
+
+  .db-aio-line {
+    width: 40px !important;
+  }
+
+  .db-seo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .db-seo-desc {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-seo-hero {
+    padding: 2.75rem 0;
+  }
+
+  .db-seo-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .db-seo-section {
+    padding: 2.75rem 0 3.75rem 0;
+  }
+
+  .db-seo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .db-seo-card {
+    padding: 1.85rem 1.45rem;
+  }
+
+  .db-seo-desc {
+    margin-bottom: 2rem;
+  }
+
+  .db-seo-offer-heading {
+    margin-bottom: 1.85rem;
+  }
+
+  .db-seo-block-divider {
+    margin-top: 3.25rem;
+    padding-top: 2.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .db-tree-node {
+    width: 56px;
+    height: 56px;
+  }
+
+  .db-tree-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .db-tree-ribbon {
+    margin-left: 28px;
+    padding: 0.75rem 24px 0.75rem 36px;
+    min-height: 80px;
+    clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 50%, calc(100% - 16px) 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 50%, calc(100% - 16px) 100%, 0% 100%);
+  }
+
+  .db-ribbon-title {
+    font-size: 0.98rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .db-ribbon-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .db-aio-line {
+    display: none;
+  }
+
+  .db-aio-num {
+    font-size: 1.75rem;
+    margin: 0 0.75rem;
+  }
+
+  .db-aio-node-wrap {
+    width: 70px;
+    height: 70px;
+  }
+
+  .db-aio-node-backdrop {
+    width: 62px;
+    height: 62px;
+  }
+
+  .db-aio-node-front {
+    width: 52px;
+    height: 52px;
+  }
+
+  .db-aio-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .db-aio-title {
+    font-size: 1rem;
+  }
+
+  .db-aio-desc {
+    font-size: 0.825rem;
+    line-height: 1.5;
+  }
+}

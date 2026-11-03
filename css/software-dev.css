@@ -1,0 +1,415 @@
+/* ==========================================================================
+   DIGITAL BULL — CUSTOMISED SOFTWARE DEVELOPMENT STYLES
+   Scoped & Isolated to software-development.aspx
+   Matches Digital Bull Brand Palette (Navy #00275b & Crimson Red #ea262a)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.db-soft-hero {
+  position: relative;
+  background-color: #04142e;
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.22) 0%, rgba(4, 20, 46, 0.95) 75%),
+    url('../img/about-hero-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6vw, 5rem) 0 clamp(3.2rem, 5.5vw, 4.5rem) 0;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(234, 38, 42, 0.35);
+  box-shadow: inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.db-soft-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-soft-hero-title {
+  font-size: clamp(2rem, 3.8vw, 3.15rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.95rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-shadow: 0 3px 14px rgba(4, 20, 46, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.db-soft-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.935rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  list-style: none;
+  background: rgba(4, 20, 46, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+}
+
+.db-soft-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-soft-breadcrumb a:hover {
+  color: #ea262a;
+}
+
+.db-soft-bc-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+.db-soft-bc-active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN SECTION & BLOCKS
+   -------------------------------------------------------------------------- */
+.db-soft-section {
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0;
+  background-color: #ffffff;
+}
+
+.db-soft-block {
+  margin-bottom: clamp(4.5rem, 6.5vw, 6rem);
+}
+
+.db-soft-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Eyebrow & Lines */
+.db-soft-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.db-soft-eyebrow-text {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.db-soft-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 3px;
+}
+
+.db-soft-eyebrow-lines .db-line-navy {
+  width: 24px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-soft-eyebrow-lines .db-line-red {
+  width: 44px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+/* Headings & Descriptions */
+.db-soft-heading {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: #00275b;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.db-soft-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #000000;
+  margin-bottom: 1.25rem;
+}
+
+/* Highlights List */
+.db-soft-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.db-soft-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.db-soft-highlight-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ea262a;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(234, 38, 42, 0.2);
+}
+
+/* Illustration Wrap */
+.db-soft-ill-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+.db-soft-illustration {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.db-soft-illustration:hover {
+  transform: translateY(-5px);
+}
+
+/* --------------------------------------------------------------------------
+   3. "WHAT WE OFFER" — 6 FEATURE CARDS GRID
+   -------------------------------------------------------------------------- */
+.db-soft-offer-header {
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.db-soft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.65rem;
+}
+
+.db-soft-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.65rem 1.85rem 1.65rem;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.db-soft-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.db-soft-card-navy::before {
+  background: linear-gradient(90deg, #00275b 0%, #0284c7 100%);
+}
+
+.db-soft-card-red::before {
+  background: linear-gradient(90deg, #ea262a 0%, #ff6b6b 100%);
+}
+
+.db-soft-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 36px rgba(15, 23, 42, 0.12);
+  border-color: rgba(2, 132, 199, 0.35);
+}
+
+.db-soft-card-red:hover {
+  border-color: rgba(234, 38, 42, 0.35);
+}
+
+.db-soft-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+}
+
+.db-soft-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.db-soft-card:hover .db-soft-card-icon {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.db-soft-card-navy .db-soft-card-icon {
+  background: rgba(0, 39, 91, 0.08);
+  color: #00275b;
+}
+
+.db-soft-card-red .db-soft-card-icon {
+  background: rgba(234, 38, 42, 0.08);
+  color: #ea262a;
+}
+
+.db-soft-card-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.db-soft-card-navy:hover .db-soft-card-num {
+  color: rgba(0, 39, 91, 0.25);
+}
+
+.db-soft-card-red:hover .db-soft-card-num {
+  color: rgba(234, 38, 42, 0.25);
+}
+
+.db-soft-card-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #00275b;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.db-soft-card-desc {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #000000;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   4. QUALITY PILLARS / WORKFLOW STRIP (BRAND ACCENTED)
+   -------------------------------------------------------------------------- */
+.db-soft-workflow-strip {
+  background: linear-gradient(135deg, #04142e 0%, #072248 100%);
+  border-radius: 24px;
+  padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.75rem, 3.5vw, 3rem);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(4, 20, 46, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.db-soft-workflow-strip::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 38, 42, 0.3) 0%, rgba(234, 38, 42, 0) 70%);
+  pointer-events: none;
+}
+
+.db-soft-strip-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.db-soft-strip-desc {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 680px;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.db-soft-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.db-soft-pillar-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.28s ease;
+}
+
+.db-soft-pillar-pill:hover {
+  background: #ea262a;
+  border-color: #ea262a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(234, 38, 42, 0.35);
+}
+
+.db-soft-pillar-pill svg {
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-soft-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640.98px) {
+  .db-soft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .db-soft-hero {
+    padding: 3rem 0;
+  }
+}

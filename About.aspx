@@ -1,8 +1,8 @@
-<%@ Page Title="About Us | Digital Bull™ - Leading Web Development & Digital Marketing Agency" Language="C#"
+<%@ Page Title="About Us | Digital Bull - Leading Web Development & Digital Marketing Agency" Language="C#"
     MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="About.aspx.cs" Inherits="About" %>
 
     <asp:Content ID="HeadContent" ContentPlaceHolderID="head" Runat="Server">
-        <title>About Us | Digital Bull™ - Leading Web Development & Digital Marketing Agency</title>
+        <title>About Us | Digital Bull - Leading Web Development & Digital Marketing Agency</title>
         <meta name="description"
             content="Learn about Digital Bull, a premier web development and digital marketing company based in Gorakhpur, India. Discover our mission, vision, and high-performance digital services." />
         <meta name="keywords"

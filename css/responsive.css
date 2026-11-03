@@ -1,94 +1,754 @@
 /* ==========================================================================
-   DIGITAL BULL — RESPONSIVE UTILITIES & SCREEN OVERRIDES
-   Version: 2.0 (2026 Modern Edition)
-   Description: Cross-device responsiveness from 320px mobile to ultra-wide displays.
+   DIGITAL BULL — GLOBAL RESPONSIVE MASTER STYLESHEET
+   Version: 2.0 (Mobile-First Comprehensive Cross-Device Optimization)
+   Loaded on EVERY page via MasterPage.master
+   Covers: All smartphones (320px - 480px), Phablets (481px - 767px),
+           Tablets (768px - 991px), and Laptops/Desktops (992px+)
+   Guarantees: Zero horizontal overflow, fluid typography, touch targets,
+               and elegant card/form/grid collapsing on mobile screens.
    ========================================================================== */
 
-/* Prevent horizontal overflow globally */
-html,
+/* --------------------------------------------------------------------------
+   1. GLOBAL HARD OVERFLOW SHIELDS (PREVENTS ANY HORIZONTAL SCROLL)
+   -------------------------------------------------------------------------- */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  position: relative;
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure all media elements never exceed their parent container */
+img,
+svg,
+video,
+canvas,
+iframe,
+picture {
   max-width: 100%;
-  overflow-x: clip;
+  height: auto;
 }
 
-/* Extra small devices (phones up to 480px) */
-@media (max-width: 480px) {
-  :root {
-    --db-section-py: 3.5rem;
-  }
-
-  .db-section-header {
-    margin-bottom: 2.5rem;
-  }
-
-  .db-btn {
-    padding: 0.75rem 1.35rem;
-    font-size: 0.8875rem;
-  }
-
-  .db-btn-lg {
-    padding: 0.95rem 1.65rem;
-    font-size: 0.95rem;
-  }
-
-  .container {
-    padding-left: 1.15rem;
-    padding-right: 1.15rem;
-  }
-
-  .db-back-to-top {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 42px;
-    height: 42px;
-  }
+/* Ensure tables do not break mobile layout */
+table {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
 }
 
-/* Small devices (phones, 481px to 767.98px) */
-@media (min-width: 481px) and (max-width: 767.98px) {
-  :root {
-    --db-section-py: 4rem;
-  }
+/* Container safety padding across screen sizes */
+.container,
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: clamp(1rem, 4vw, 1.5rem) !important;
+  padding-right: clamp(1rem, 4vw, 1.5rem) !important;
+  box-sizing: border-box !important;
 }
 
-/* Medium devices (tablets, 768px to 991.98px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  :root {
-    --db-section-py: 4.75rem;
-  }
+@media (min-width: 576px) {
+  .container { max-width: 540px !important; }
 }
 
-/* Large devices (desktops, 992px to 1199.98px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .db-nav-link {
-    padding: 0.5rem 0.7rem;
-    font-size: 0.8875rem;
-  }
+@media (min-width: 768px) {
+  .container { max-width: 720px !important; }
 }
 
-/* Extra large devices (1200px and up) */
+@media (min-width: 992px) {
+  .container { max-width: 960px !important; }
+}
+
 @media (min-width: 1200px) {
-  .container {
-    max-width: 1180px;
+  .container { max-width: 1180px !important; }
+}
+
+@media (min-width: 1400px) {
+  .container { max-width: 1280px !important; }
+}
+
+/* Row gutter containment to prevent margin overflow */
+.row {
+  --bs-gutter-x: 1.25rem;
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO BANNERS (ACROSS ALL PAGES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-perf-hero,
+  .db-soft-hero,
+  .db-career-hero,
+  .db-webdev-hero,
+  .db-smm-hero,
+  .db-dm-hero,
+  .db-about-hero,
+  .db-page-hero {
+    padding: clamp(2.5rem, 7vw, 3.25rem) 0 !important;
+  }
+
+  .db-perf-hero-title,
+  .db-soft-hero-title,
+  .db-career-hero-title,
+  .db-webdev-hero-title,
+  .db-smm-hero-title,
+  .db-dm-hero-title,
+  .db-about-hero-title,
+  .db-page-hero-title {
+    font-size: clamp(1.65rem, 5.5vw, 2.15rem) !important;
+    line-height: 1.25 !important;
+    padding: 0 0.5rem;
+  }
+
+  /* Breadcrumb in hero */
+  .db-breadcrumb-pill {
+    padding: 0.35rem 0.85rem !important;
+    font-size: 0.78rem !important;
   }
 }
 
-/* Ultra wide screens (1440px and up) */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1280px;
+/* --------------------------------------------------------------------------
+   3. PERFORMANCE MARKETING PAGE RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-perf-cards-grid,
+  .db-eye-cards-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    gap: 2.75rem !important;
   }
-}
-
-/* Responsive Grid Helper Utilities */
-.db-grid-auto-fit {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
 }
 
 @media (max-width: 575.98px) {
-  .db-grid-auto-fit {
-    grid-template-columns: 1fr;
+  .db-perf-section {
+    padding: 2.5rem 0 3.5rem 0 !important;
+  }
+
+  .db-perf-eyebrow {
+    margin-bottom: 0.65rem !important;
+  }
+
+  .db-perf-eyebrow-text {
+    font-size: 0.85rem !important;
+  }
+
+  .db-perf-eyebrow-lines .db-line-navy { width: 22px !important; }
+  .db-perf-eyebrow-lines .db-line-red { width: 36px !important; }
+
+  .db-perf-lead-desc {
+    font-size: 0.94rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .db-perf-offer-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 2.25rem !important;
+  }
+
+  /* Googly Eyes Speech Bubble Cards on Mobile */
+  .db-eye-card-wrap {
+    padding-top: 22px !important;
+  }
+
+  .db-bubble-body {
+    border-width: 7px !important;
+    border-radius: 26px !important;
+    padding: 1.5rem 1.15rem 1.85rem 1.15rem !important;
+    min-height: auto !important;
+  }
+
+  .db-googly-eyes {
+    left: 20px !important;
+  }
+
+  .db-googly-eyes.eyes-right {
+    left: auto !important;
+    right: 20px !important;
+  }
+
+  .db-eye-socket {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 3.5px !important;
+  }
+
+  .db-eye-pupil {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  .db-platform-name {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .db-platform-icon-wrap {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .db-card-brand-img {
+    max-width: 54px !important;
+    max-height: 54px !important;
+  }
+
+  .db-card-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .db-bubble-tail {
+    bottom: -18px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. CAREER PAGE RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-career-section {
+    padding: 2.5rem 0 3.5rem 0 !important;
+  }
+
+  .db-career-header {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .db-career-title {
+    font-size: clamp(1.5rem, 5.5vw, 1.95rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .db-career-subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  .db-career-card {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: 16px !important;
+    margin-bottom: 2.25rem !important;
+  }
+
+  .db-form-label {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .db-form-control {
+    height: 48px !important;
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.95rem !important;
+  }
+
+  .db-form-textarea {
+    min-height: 115px !important;
+    font-size: 0.9rem !important;
+    padding: 0.75rem 0.95rem !important;
+  }
+
+  .db-upload-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    padding: 1.15rem 1rem !important;
+  }
+
+  .db-upload-left {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .db-upload-ico {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .db-upload-main {
+    font-size: 0.9rem !important;
+  }
+
+  .db-upload-sub {
+    font-size: 0.78rem !important;
+  }
+
+  .db-upload-right {
+    width: 100% !important;
+  }
+
+  .db-btn-browse {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.75rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .db-btn-submit-application {
+    height: 50px !important;
+    font-size: 0.98rem !important;
+  }
+
+  .db-career-perks-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .db-career-perk {
+    padding: 1.15rem 1rem !important;
+    border-radius: 12px !important;
+    gap: 0.85rem !important;
+  }
+
+  .db-perk-ico {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .db-perk-title {
+    font-size: 0.95rem !important;
+  }
+
+  .db-perk-desc {
+    font-size: 0.82rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. SOCIAL MEDIA MARKETING PAGE RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-smm-section {
+    padding: 2.5rem 0 3.5rem 0 !important;
+  }
+
+  .db-smm-offer-heading {
+    font-size: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .db-eye-row-top,
+  .db-eye-row-bottom {
+    grid-template-columns: 1fr !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    gap: 2.5rem !important;
+  }
+
+  .db-eye-row-bottom .db-eye-card-wrap {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. CUSTOM SOFTWARE & WEB DEV PAGES RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-soft-section,
+  .db-webdev-section {
+    padding: 2.5rem 0 3.5rem 0 !important;
+  }
+
+  .db-soft-heading,
+  .db-webdev-heading {
+    font-size: 1.45rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .db-soft-grid,
+  .db-webdev-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .db-soft-card,
+  .db-webdev-card {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 16px !important;
+  }
+
+  .db-soft-workflow-strip,
+  .db-webdev-workflow-strip {
+    padding: 1.65rem 1.25rem !important;
+    border-radius: 18px !important;
+  }
+
+  .db-soft-strip-title,
+  .db-webdev-strip-title {
+    font-size: 1.25rem !important;
+  }
+
+  .db-soft-pills-row,
+  .db-webdev-pills-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+  }
+
+  .db-soft-pillar-pill,
+  .db-webdev-pillar-pill {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    font-size: 0.85rem !important;
+    padding: 0.55rem 0.95rem !important;
+  }
+
+  /* Target Infographic in Website Development */
+  .db-target-infographic {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.25rem !important;
+  }
+
+  .db-target-svg-wrap {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 220px !important;
+    margin: 0 auto !important;
+  }
+
+  .db-target-bars {
+    width: 100% !important;
+    height: auto !important;
+    gap: 0.45rem !important;
+  }
+
+  .db-target-bar {
+    clip-path: none !important;
+    border-radius: 8px !important;
+    padding: 0.65rem 1rem !important;
+    height: auto !important;
+    min-height: 48px !important;
+  }
+
+  .db-bar-num {
+    font-size: 1.25rem !important;
+    padding-right: 0.75rem !important;
+    margin-right: 0.75rem !important;
+  }
+
+  .db-bar-text {
+    font-size: 0.88rem !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. DIGITAL MARKETING ZIGZAG TIMELINE (RESPONSIVE NO-OVERFLOW)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-zigzag-timeline {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .db-zigzag-svg-canvas {
+    display: none !important;
+  }
+
+  .db-zigzag-steps-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  .db-zz-row-left,
+  .db-zz-row-right {
+    width: 100% !important;
+    justify-content: stretch !important;
+  }
+
+  .db-zz-card {
+    width: 100% !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .db-zz-pill {
+    width: 100% !important;
+    border-radius: 16px !important;
+    padding: 1.15rem 1.15rem !important;
+  }
+
+  .db-zz-row-right .db-zz-pill {
+    flex-direction: row !important;
+    padding-right: 1.25rem !important;
+    padding-left: 1.15rem !important;
+  }
+
+  .db-zz-content {
+    text-align: left !important;
+  }
+
+  .db-zz-chevron {
+    display: none !important;
+  }
+
+  .db-zz-circle-wrap {
+    margin-left: -20px !important;
+    margin-right: 0 !important;
+    flex: 0 0 54px !important;
+    width: 54px !important;
+    height: 54px !important;
+  }
+
+  .db-zz-inner-circle {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .db-zz-step-num {
+    font-size: 0.88rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. ABOUT PAGE MASCOT & VALUES RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-about-section {
+    padding: 2.5rem 0 3.5rem 0 !important;
+  }
+
+  .db-about-main-heading {
+    font-size: 1.55rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .db-about-graphic-box {
+    max-width: 280px !important;
+    margin: 1.5rem auto 0 auto !important;
+  }
+
+  .db-info-card {
+    flex-direction: column !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .db-info-card-body {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .db-info-icon,
+  .db-info-ribbon-arrow {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. HOMEPAGE RESPONSIVENESS (HERO, TICKER, SERVICES, CAROUSEL)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .db-home-hero {
+    padding: 2rem 0 !important;
+  }
+
+  .db-home-hero-title {
+    font-size: clamp(1.55rem, 5.5vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .db-home-hero-desc {
+    font-size: 0.94rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .db-home-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .db-hero-btn-primary,
+  .db-hero-btn-outline {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.92rem !important;
+  }
+
+  /* Stats Strip */
+  .db-hero-stats-strip {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+
+  .db-hero-stat-col {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .db-hero-stat-col:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Prevent Tilted Box from Causing Horizontal Scroll */
+  .db-callback-wrap {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .db-callback-backdrop {
+    transform: none !important;
+    inset: 0 !important;
+    opacity: 0.4 !important;
+    border-radius: 16px !important;
+  }
+
+  .db-callback-card {
+    border-radius: 16px !important;
+    padding: 1.5rem 1.15rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. NAVBAR, HEADER & FOOTER ON MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-header {
+    padding: 0.45rem 0 !important;
+  }
+
+  .db-brand img {
+    height: 38px !important;
+    max-width: 160px !important;
+  }
+
+  .db-navbar-toggler {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+  }
+
+  .db-mobile-nav,
+  .db-header .db-nav-collapse.d-lg-none {
+    top: 62px !important;
+    padding: 1.25rem !important;
+    max-height: calc(100vh - 62px) !important;
+    overflow-y: auto !important;
+    border-top: 3px solid #ea262a !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Footer Responsiveness */
+  .db-footer {
+    padding-top: 3rem !important;
+  }
+
+  .db-footer-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .db-footer-bottom {
+    margin-top: 2.25rem !important;
+    padding: 1.25rem 0 !important;
+  }
+
+  .db-footer-bottom .container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.65rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. FLOATING ACTION BUTTONS (WHATSAPP & BACK TO TOP)
+   Guarantees no collision / proper spacing on all mobile screens
+   -------------------------------------------------------------------------- */
+.db-whatsapp-float {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 18px !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  z-index: 1040 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5) !important;
+}
+
+.db-whatsapp-float svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.db-back-to-top {
+  position: fixed !important;
+  bottom: 82px !important;
+  right: 22px !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  z-index: 1030 !important;
+}
+
+@media (max-width: 480px) {
+  .db-whatsapp-float {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .db-whatsapp-float svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .db-back-to-top {
+    bottom: 74px !important;
+    right: 19px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 }

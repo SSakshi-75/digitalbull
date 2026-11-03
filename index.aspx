@@ -2,7 +2,7 @@
     CodeFile="index.aspx.cs" Inherits="index" %>
 
     <asp:Content ID="HeadContent" ContentPlaceHolderID="head" runat="Server">
-        <title>Digital Marketing Agency in Gorakhpur | Digital Bull™</title>
+        <title>Digital Marketing Agency in Gorakhpur | Digital Bull</title>
         <meta name="description"
             content="Digital Bull is Gorakhpur's top performance digital marketing, SEO, social media marketing, and custom web development agency. Scale your business today." />
         <meta name="keywords"

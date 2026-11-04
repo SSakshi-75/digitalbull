@@ -21,7 +21,7 @@
 
     <!-- Modular CSS Architecture -->
     <link rel="stylesheet" href="css/global.css?v=3.0" />
-    <link rel="stylesheet" href="css/navbar.css?v=3.0" />
+    <link rel="stylesheet" href="css/navbar.css?v=3.1" />
     <link rel="stylesheet" href="css/footer.css?v=3.0" />
     <link rel="stylesheet" href="animations/animations.css?v=3.0" />
     <link rel="stylesheet" href="css/responsive.css?v=3.0" />
@@ -105,7 +105,7 @@
                                 </ul>
                             </li>
                             <li class="db-nav-item">
-                                <a href="#db-work" class="db-nav-link">Portfolio</a>
+                                <a href="portfolio.aspx" class="db-nav-link">Portfolio</a>
                             </li>
                             <li class="db-nav-item">
                                 <a href="blog.aspx" class="db-nav-link">Blog</a>
@@ -117,21 +117,23 @@
                                 <a href="career.aspx" class="db-nav-link">Career</a>
                             </li>
                             <li class="db-nav-item">
-                                <a href="#db-contact" class="db-nav-link">Contact</a>
+                                <a href="contact.aspx" class="db-nav-link">Contact</a>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Header CTA Buttons (Exact Screenshot Matched) -->
                     <div class="d-none d-lg-flex align-items-center gap-2">
-                        <a href="#db-contact" class="db-btn-nav-primary db-btn-nav-demo">Free Demo</a>
+                        <a href="demo.aspx" class="db-btn-nav-primary db-btn-nav-demo">Free Demo</a>
                         <a href="login.aspx" class="db-btn-nav-primary db-btn-nav-login">Login</a>
                     </div>
 
-                    <!-- Mobile Hamburger Button -->
+                    <!-- Mobile Hamburger Button (Exact Screenshot Matched) -->
                     <button class="db-navbar-toggler d-lg-none" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        <svg viewBox="0 0 24 24" width="24" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+                            <line x1="3.5" y1="5" x2="20.5" y2="5"></line>
+                            <line x1="3.5" y1="12" x2="20.5" y2="12"></line>
+                            <line x1="3.5" y1="19" x2="20.5" y2="19"></line>
                         </svg>
                     </button>
                 </nav>
@@ -192,7 +194,7 @@
                         </ul>
                     </li>
                     <li class="db-sidebar-item">
-                        <a href="index.aspx#db-work" class="db-sidebar-link">Portfolio</a>
+                        <a href="portfolio.aspx" class="db-sidebar-link">Portfolio</a>
                     </li>
                     <li class="db-sidebar-item">
                         <a href="blog.aspx" class="db-sidebar-link">Blog</a>
@@ -204,14 +206,14 @@
                         <a href="career.aspx" class="db-sidebar-link">Career</a>
                     </li>
                     <li class="db-sidebar-item">
-                        <a href="index.aspx#db-contact" class="db-sidebar-link">Contact</a>
+                        <a href="contact.aspx" class="db-sidebar-link">Contact</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Sidebar Footer CTA Buttons -->
             <div class="db-sidebar-footer">
-                <a href="index.aspx#db-contact" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-demo text-center">Free Demo</a>
+                <a href="demo.aspx" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-demo text-center">Free Demo</a>
                 <a href="login.aspx" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-login text-center">Login</a>
             </div>
         </aside>

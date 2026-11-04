@@ -1,0 +1,372 @@
+/* ==========================================================================
+   DIGITAL BULL — PORTFOLIO PAGE STYLESHEET
+   Version: 3.0 (Single Unified Card Showcase - No Inner Box/Card)
+   Palette: Digital Bull Navy (#00275b) + Crimson Red (#ea262a) + Crisp White
+   ========================================================================== */
+
+/* 1. HERO BREADCRUMB BANNER */
+.db-portfolio-hero {
+  position: relative;
+  background-color: #00275b;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(234, 38, 42, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(0, 85, 204, 0.25) 0%, transparent 50%),
+    url('../img/breadcrumb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.25rem 0;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 3px solid #ea262a;
+}
+
+.db-portfolio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 39, 91, 0.78);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.db-portfolio-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-portfolio-hero-title {
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+}
+
+.db-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.db-breadcrumb a {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.db-breadcrumb .separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.db-breadcrumb .active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* 2. MAIN PORTFOLIO SHOWCASE SECTION */
+.db-portfolio-section {
+  padding: 5rem 0 7rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 40%, #f8fafc 100%);
+  position: relative;
+}
+
+/* Section Header */
+.db-portfolio-header {
+  margin-bottom: 3.5rem;
+}
+
+.db-portfolio-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.db-portfolio-eyebrow-text {
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #00275b;
+  text-transform: uppercase;
+}
+
+.db-portfolio-eyebrow-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.db-portfolio-eyebrow-lines .db-line-navy {
+  display: inline-block;
+  width: 16px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-portfolio-eyebrow-lines .db-line-red {
+  display: inline-block;
+  width: 28px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+.db-portfolio-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  color: #00275b;
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.015em;
+}
+
+.db-portfolio-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* 3. SINGLE UNIFIED CARD (NO INNER CARD/BOX) */
+.db-portfolio-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 280px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 39, 91, 0.05);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top Accent Line on Hover */
+.db-portfolio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00275b 0%, #ea262a 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.db-portfolio-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(234, 38, 42, 0.4);
+  box-shadow: 0 20px 42px rgba(0, 39, 91, 0.12), 0 0 0 1px rgba(234, 38, 42, 0.2);
+}
+
+.db-portfolio-card:hover::before {
+  opacity: 1;
+}
+
+/* Logo Presentation Area - Clean, Spacious & Bigger Logos */
+.db-portfolio-logo-wrap {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 1rem;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.db-portfolio-card:hover .db-portfolio-logo-wrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.db-portfolio-logo {
+  max-height: 140px;
+  max-width: 94%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.db-portfolio-card:hover .db-portfolio-logo {
+  transform: scale(1.06);
+}
+
+/* Card Information Section */
+.db-portfolio-card-info {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.db-portfolio-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #00275b;
+  margin: 0;
+  line-height: 1.35;
+  transition: color 0.25s ease;
+  letter-spacing: -0.01em;
+}
+
+.db-portfolio-card:hover .db-portfolio-card-title {
+  color: #ea262a;
+}
+
+/* Modern Pill Category Badge */
+.db-portfolio-card-cat {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #475569;
+  background: rgba(0, 39, 91, 0.05);
+  padding: 0.25rem 0.85rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.db-portfolio-card:hover .db-portfolio-card-cat {
+  background: rgba(234, 38, 42, 0.09);
+  color: #ea262a;
+  border-color: rgba(234, 38, 42, 0.25);
+}
+
+/* 4. RESPONSIVE BREAKPOINTS */
+@media (max-width: 1199.98px) {
+  .db-portfolio-card {
+    padding: 1.75rem 1rem 1.45rem;
+    min-height: 260px;
+  }
+
+  .db-portfolio-logo-wrap {
+    height: 140px;
+  }
+
+  .db-portfolio-logo {
+    max-height: 125px;
+    max-width: 94%;
+  }
+
+  .db-portfolio-card-title {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .db-portfolio-hero {
+    padding: 3.25rem 0 2.75rem;
+  }
+
+  .db-portfolio-section {
+    padding: 4rem 0 5rem;
+  }
+
+  .db-portfolio-header {
+    margin-bottom: 2.75rem;
+  }
+
+  .db-portfolio-card {
+    padding: 1.5rem 0.95rem 1.35rem;
+    min-height: 240px;
+  }
+
+  .db-portfolio-logo-wrap {
+    height: 125px;
+    margin-bottom: 0.95rem;
+  }
+
+  .db-portfolio-logo {
+    max-height: 110px;
+    max-width: 94%;
+  }
+
+  .db-portfolio-card-title {
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .db-portfolio-hero {
+    padding: 2.75rem 0 2.25rem;
+  }
+
+  .db-portfolio-hero-title {
+    font-size: 1.95rem;
+  }
+
+  .db-portfolio-section {
+    padding: 3rem 0 4rem;
+  }
+
+  .db-portfolio-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .db-portfolio-title {
+    font-size: 1.55rem;
+  }
+
+  .db-portfolio-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .db-portfolio-card {
+    padding: 1.35rem 0.75rem 1.15rem;
+    border-radius: 14px;
+    min-height: 215px;
+  }
+
+  .db-portfolio-logo-wrap {
+    height: 110px;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  .db-portfolio-logo {
+    max-height: 95px;
+    max-width: 95%;
+  }
+
+  .db-portfolio-card-title {
+    font-size: 0.86rem;
+  }
+
+  .db-portfolio-card-cat {
+    font-size: 0.68rem;
+    padding: 0.18rem 0.65rem;
+  }
+}

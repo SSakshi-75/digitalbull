@@ -316,28 +316,33 @@
    -------------------------------------------------------------------------- */
 .db-navbar-toggler {
   display: none;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 3px solid var(--db-navy, #012559);
+  border-radius: 14px;
+  padding: 0;
   color: var(--db-navy, #012559);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 42px;
+  box-shadow: 0 2px 8px rgba(1, 37, 89, 0.08);
 }
 
-.db-navbar-toggler:hover {
-  background: #f1f5f9;
-  color: var(--db-red, #ea262a);
+.db-navbar-toggler:hover,
+.db-navbar-toggler:focus {
+  background-color: #f8fafc;
+  border-color: var(--db-navy, #012559);
+  color: var(--db-navy, #012559);
+  outline: none;
+}
+
+.db-navbar-toggler:active {
+  transform: scale(0.96);
 }
 
 .db-navbar-toggler svg {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
   display: block;
 }
 
@@ -357,7 +362,7 @@
     display: none !important;
   }
 
-  /* 1. Mobile Sticky Navbar */
+  /* 1. Mobile Sticky Navbar (Screenshot Matched: Navy Border-Bottom) */
   .db-header {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -367,7 +372,8 @@
     width: 100% !important;
     z-index: 1050 !important;
     background-color: #ffffff !important;
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 3px solid var(--db-navy, #012559) !important;
+    box-shadow: 0 4px 16px rgba(1, 37, 89, 0.08) !important;
   }
 
   body.db-sidebar-open {
@@ -434,7 +440,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 2px solid var(--db-navy, #012559);
     background: #ffffff;
   }
 

@@ -24,13 +24,6 @@
         <section class="db-smm-hero" aria-label="Social Media Marketing Header">
             <div class="container db-smm-hero-inner">
                 <h1 class="db-smm-hero-title mb-0">Social Media Marketing</h1>
-                <ul class="db-smm-breadcrumb mt-3" aria-label="Breadcrumb">
-                    <li><a href="index.aspx">Home</a></li>
-                    <li class="db-smm-bc-sep" aria-hidden="true">/</li>
-                    <li><a href="#db-services">Pages</a></li>
-                    <li class="db-smm-bc-sep" aria-hidden="true">/</li>
-                    <li class="db-smm-bc-active" aria-current="page">Social Media Marketing</li>
-                </ul>
             </div>
         </section>
 

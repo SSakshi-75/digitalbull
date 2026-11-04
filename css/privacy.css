@@ -1,0 +1,419 @@
+/* ==========================================================================
+   DIGITAL BULL — PRIVACY POLICY STYLESHEET (ATTRACTIVE & MODERN UI)
+   Theme: Digital Bull Brand (Navy #00275b / #012559, Red #ea262a, Soft Blue #0055ff)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+/* 1. HERO BANNER */
+.db-privacy-hero {
+  position: relative;
+  background-color: #00275b;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(234, 38, 42, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(0, 85, 204, 0.25) 0%, transparent 50%),
+    url('../img/breadcrumb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0 3.25rem;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 3px solid #ea262a;
+}
+
+.db-privacy-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 39, 91, 0.82);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.db-privacy-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-privacy-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* 2. MAIN PRIVACY SECTION */
+.db-privacy-section {
+  padding: 4.5rem 0 5.5rem;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 39, 91, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(234, 38, 42, 0.03) 0%, transparent 40%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.db-privacy-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 3. AESTHETIC DOCUMENT CARD */
+.db-privacy-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 
+    0 24px 55px -12px rgba(0, 39, 91, 0.09),
+    0 4px 16px rgba(0, 39, 91, 0.03);
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 3.5rem 4rem;
+  transition: box-shadow 0.35s ease;
+}
+
+.db-privacy-card:hover {
+  box-shadow: 
+    0 32px 65px -12px rgba(0, 39, 91, 0.12),
+    0 6px 20px rgba(0, 39, 91, 0.04);
+}
+
+/* Top Accent Gradient Line */
+.db-privacy-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ea262a 0%, #ff5757 35%, #0055ff 70%, #00275b 100%);
+}
+
+/* Header & Meta */
+.db-privacy-header {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.db-privacy-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #00275b;
+  background-color: rgba(0, 39, 91, 0.07);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.db-privacy-eyebrow svg {
+  width: 14px;
+  height: 14px;
+  color: #ea262a;
+}
+
+.db-privacy-title {
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.db-privacy-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 0.95rem;
+  border-radius: 8px;
+}
+
+.db-privacy-meta svg {
+  width: 16px;
+  height: 16px;
+  color: #00275b;
+}
+
+.db-privacy-intro-callout {
+  margin-top: 1.5rem;
+  padding: 1.15rem 1.35rem;
+  background: #f0f7ff;
+  border-left: 4px solid #0055ff;
+  border-radius: 8px;
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: #0f172a;
+  line-height: 1.68;
+}
+
+/* 4. CONTENT SECTIONS */
+.db-privacy-block {
+  margin-bottom: 2.75rem;
+}
+
+.db-privacy-block:last-child {
+  margin-bottom: 0;
+}
+
+.db-privacy-h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #00275b;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.db-privacy-h2-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: rgba(0, 39, 91, 0.08);
+  color: #00275b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.db-privacy-h2-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.db-privacy-h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 1.25rem 0 0.65rem 0;
+  letter-spacing: -0.01em;
+}
+
+.db-privacy-p {
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.db-privacy-p:last-child {
+  margin-bottom: 0;
+}
+
+/* 5. DEFINITIONS & CARDS LIST */
+.db-definitions-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.db-definition-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.db-definition-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 39, 91, 0.05);
+}
+
+.db-def-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ea262a;
+  margin-top: 0.55rem;
+  flex-shrink: 0;
+}
+
+.db-def-term {
+  font-weight: 800;
+  color: #00275b;
+}
+
+/* Sub-card list inside sections (e.g. Cookies, Uses) */
+.db-cookie-card {
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem 1.45rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 39, 91, 0.04);
+}
+
+.db-cookie-card h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #00275b;
+  margin-bottom: 0.5rem;
+}
+
+.db-cookie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.db-cookie-meta-tag {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+}
+
+/* Highlight Bullet Points */
+.db-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.db-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.93rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.db-bullet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0055ff;
+  margin-top: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* 6. CONTACT US BOX */
+.db-privacy-contact-card {
+  background: linear-gradient(135deg, #00275b 0%, #013880 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 2.25rem 2.5rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 16px 36px rgba(0, 39, 91, 0.2);
+}
+
+.db-privacy-contact-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.db-privacy-contact-desc {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.db-privacy-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.db-privacy-contact-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.22s ease;
+}
+
+.db-privacy-contact-pill:hover {
+  background: #ffffff;
+  color: #00275b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.db-privacy-contact-pill svg {
+  width: 20px;
+  height: 20px;
+  color: #ea262a;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.db-privacy-contact-pill:hover svg {
+  color: #00275b;
+}
+
+/* 7. RESPONSIVE DESIGN */
+@media (max-width: 991.98px) {
+  .db-privacy-card {
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+  }
+
+  .db-privacy-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-privacy-card {
+    padding: 1.85rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .db-privacy-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .db-privacy-contact-card {
+    padding: 1.65rem 1.35rem;
+  }
+
+  .db-privacy-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .db-definition-item {
+    padding: 0.85rem 1rem;
+  }
+}
+

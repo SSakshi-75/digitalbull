@@ -25,13 +25,6 @@
         <section class="db-soft-hero" aria-label="Customised Software Development Header">
             <div class="container db-soft-hero-inner">
                 <h1 class="db-soft-hero-title mb-0">Customised software development</h1>
-                <ul class="db-soft-breadcrumb mt-3" aria-label="Breadcrumb">
-                    <li><a href="index.aspx">Home</a></li>
-                    <li class="db-soft-bc-sep" aria-hidden="true">/</li>
-                    <li><a href="#db-services">Pages</a></li>
-                    <li class="db-soft-bc-sep" aria-hidden="true">/</li>
-                    <li class="db-soft-bc-active" aria-current="page">Customised software development</li>
-                </ul>
             </div>
         </section>
 

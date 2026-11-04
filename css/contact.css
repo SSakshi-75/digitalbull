@@ -1,0 +1,819 @@
+/* ==========================================================================
+   DIGITAL BULL — CONTACT US PAGE STYLESHEET (ATTRACTIVE & MODERN UI)
+   Theme: Digital Bull Brand (Navy #00275b / #012559, Red #ea262a, Soft Blue #0055ff)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.db-contact-hero {
+  position: relative;
+  background-color: #00275b;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(234, 38, 42, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(0, 85, 204, 0.28) 0%, transparent 50%),
+    url('../img/breadcrumb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0 3.25rem;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 3px solid #ea262a;
+}
+
+.db-contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 39, 91, 0.82);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.db-contact-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-contact-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN CONTACT SECTION
+   -------------------------------------------------------------------------- */
+.db-contact-section {
+  padding: 4.5rem 0 3.5rem;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 39, 91, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(234, 38, 42, 0.03) 0%, transparent 40%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.db-contact-container {
+  width: 100% !important;
+  max-width: 1560px !important;
+  padding-left: clamp(1rem, 3.2vw, 3rem) !important;
+  padding-right: clamp(1rem, 3.2vw, 3rem) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.db-contact-row {
+  --bs-gutter-x: 1.75rem;
+}
+
+@media (min-width: 992px) {
+  .db-contact-row {
+    --bs-gutter-x: 2.25rem;
+  }
+  .db-contact-row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .db-contact-row {
+    --bs-gutter-x: 2.75rem;
+  }
+}
+
+/* Eyebrow with Navy & Red Lines */
+.db-contact-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.db-contact-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #00275b;
+  text-transform: uppercase;
+}
+
+.db-contact-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.db-line-navy {
+  display: inline-block;
+  width: 20px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-line-red {
+  display: inline-block;
+  width: 32px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+/* Headings */
+.db-contact-heading {
+  font-size: clamp(1.95rem, 3.2vw, 2.45rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle / Paragraph Description */
+.db-contact-desc {
+  font-size: 0.96rem;
+  color: #475569;
+  line-height: 1.68;
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. LEFT COLUMN: LOCATION CARDS (ATTRACTIVE DESIGN)
+   -------------------------------------------------------------------------- */
+.db-contact-left-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 0.5rem;
+}
+
+.db-location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.db-location-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.15rem 1.4rem;
+  box-shadow: 0 4px 18px rgba(0, 39, 91, 0.04);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  width: 100%;
+}
+
+.db-location-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 39, 91, 0.09);
+  border-color: #cbd5e1;
+}
+
+.db-location-icon-wrap {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00275b 0%, #0055ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 85, 255, 0.25);
+  color: #ffffff;
+}
+
+.db-location-icon-wrap.db-loc-icon-noida {
+  background: linear-gradient(135deg, #ea262a 0%, #ff5757 100%);
+  box-shadow: 0 8px 18px rgba(234, 38, 42, 0.25);
+}
+
+.db-location-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.db-location-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.db-location-title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #00275b;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.db-location-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #00275b;
+  background-color: rgba(0, 39, 91, 0.08);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.db-location-badge.db-badge-secondary {
+  color: #ea262a;
+  background-color: rgba(234, 38, 42, 0.08);
+}
+
+.db-location-text {
+  font-size: 0.91rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0.25rem 0 0;
+}
+
+/* Card Meta Row (for Quick Contact & Opening Hrs) */
+.db-card-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.75rem;
+  margin-top: 0.35rem;
+}
+
+.db-card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.91rem;
+}
+
+.db-card-meta-label {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.db-card-meta-value {
+  color: #00275b;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.db-card-meta-value:hover {
+  color: #ea262a;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   4. LEFT COLUMN: TWO-COLUMN INFO PANEL
+   -------------------------------------------------------------------------- */
+.db-contact-info-panel {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 18px rgba(0, 39, 91, 0.04);
+}
+
+.db-cinfo-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+}
+
+.db-cinfo-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #00275b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.db-cinfo-icon.db-cinfo-icon-cal {
+  color: #ea262a;
+}
+
+.db-cinfo-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.db-cinfo-body {
+  flex: 1;
+}
+
+.db-cinfo-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #00275b;
+  margin: 0 0 0.4rem 0;
+}
+
+.db-cinfo-row {
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.db-cinfo-row:last-child {
+  margin-bottom: 0;
+}
+
+.db-cinfo-lbl {
+  color: #64748b;
+  font-weight: 500;
+  display: block;
+}
+
+.db-cinfo-val {
+  color: #0f172a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.db-cinfo-val:hover {
+  color: #ea262a;
+  text-decoration: underline;
+}
+
+.db-vacation-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #b91c1c;
+  background-color: #fee2e2;
+  padding: 0.18rem 0.55rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   5. LEFT COLUMN: SOCIAL SHARE STRIP (ICON-ONLY BUTTONS)
+   -------------------------------------------------------------------------- */
+.db-contact-share-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.db-share-btn-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.db-share-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00275b 0%, #013880 100%);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0, 39, 91, 0.2);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.db-share-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.db-share-label {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #00275b;
+}
+
+.db-social-links-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.db-social-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1.5px solid;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.db-social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.db-social-icon-btn:hover svg {
+  transform: scale(1.15);
+}
+
+.db-social-icon-btn.db-social-fb {
+  border-color: #1877f2;
+  color: #1877f2;
+  background-color: rgba(24, 119, 242, 0.06);
+}
+
+.db-social-icon-btn.db-social-fb:hover {
+  background-color: #1877f2;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.32);
+}
+
+.db-social-icon-btn.db-social-yt {
+  border-color: #ea262a;
+  color: #ea262a;
+  background-color: rgba(234, 38, 42, 0.06);
+}
+
+.db-social-icon-btn.db-social-yt:hover {
+  background-color: #ea262a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(234, 38, 42, 0.32);
+}
+
+.db-social-icon-btn.db-social-ig {
+  border-color: #e4405f;
+  color: #e4405f;
+  background-color: rgba(228, 64, 95, 0.06);
+}
+
+.db-social-icon-btn.db-social-ig:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(228, 64, 95, 0.32);
+}
+
+/* --------------------------------------------------------------------------
+   6. RIGHT COLUMN: PREMIUM CONTACT FORM CARD
+   -------------------------------------------------------------------------- */
+.db-contact-form-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 
+    0 24px 55px -12px rgba(0, 39, 91, 0.1),
+    0 4px 16px rgba(0, 39, 91, 0.03);
+  position: relative;
+  overflow: hidden;
+  padding: 2.75rem 2.5rem 2.5rem;
+  transition: box-shadow 0.35s ease;
+}
+
+.db-contact-form-card form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.db-contact-form-card:hover {
+  box-shadow: 
+    0 30px 65px -12px rgba(0, 39, 91, 0.14),
+    0 8px 22px rgba(0, 39, 91, 0.04);
+}
+
+/* Card Top Accent Gradient */
+.db-form-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ea262a 0%, #ff5757 35%, #0055ff 70%, #00275b 100%);
+}
+
+.db-cform-field {
+  margin-bottom: 0.25rem;
+}
+
+.db-field-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.45rem;
+  display: block;
+  letter-spacing: 0.01em;
+}
+
+.db-cform-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.db-cform-input {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 2.75rem 0.85rem 1.15rem;
+  line-height: 1.5;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  margin-bottom: 0;
+}
+
+.db-cform-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.db-input-ico {
+  position: absolute;
+  right: 1.05rem;
+  width: 18px;
+  height: 18px;
+  color: #94a3b8;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.db-cform-input:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.db-cform-input:focus {
+  background-color: #ffffff;
+  border-color: #00275b;
+  box-shadow: 0 0 0 4px rgba(0, 39, 91, 0.08);
+}
+
+.db-cform-input-wrap:focus-within .db-input-ico {
+  color: #ea262a;
+}
+
+.db-cform-textarea {
+  min-height: 125px;
+  resize: vertical;
+  padding-right: 1.15rem;
+}
+
+/* Submit Button */
+.db-cform-submit-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #ea262a 0%, #c41318 100%);
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 1.05rem 2rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(234, 38, 42, 0.28);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease;
+  margin-top: 0.35rem;
+}
+
+.db-cform-submit-btn:hover {
+  background: linear-gradient(135deg, #ff3338 0%, #ea262a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(234, 38, 42, 0.38);
+}
+
+.db-cform-submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 38, 42, 0.3);
+}
+
+.db-cform-submit-btn svg {
+  width: 19px;
+  height: 19px;
+  transition: transform 0.25s ease;
+}
+
+.db-cform-submit-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Trust Badges Strip */
+.db-cform-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.db-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.db-trust-badge svg {
+  width: 16px;
+  height: 16px;
+  color: #16a34a;
+}
+
+/* Alert Notification */
+.db-contact-alert {
+  display: none;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem 1.45rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
+  animation: dbSlideDown 0.35s ease forwards;
+}
+
+.db-contact-alert-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.db-alert-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.db-alert-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;
+}
+
+@keyframes dbSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. GOOGLE MAPS EMBED SECTION
+   -------------------------------------------------------------------------- */
+.db-contact-map-section {
+  padding: 1rem 0 5.5rem;
+  background-color: #f8fafc;
+}
+
+.db-map-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #00275b;
+  color: #ffffff;
+  padding: 0.5rem 1.35rem;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+  box-shadow: 0 4px 14px rgba(0, 39, 91, 0.16);
+}
+
+.db-map-header-pill svg {
+  width: 18px;
+  height: 18px;
+  color: #ea262a;
+}
+
+.db-map-card {
+  width: 100%;
+  height: 440px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 16px 42px rgba(0, 39, 91, 0.08);
+  position: relative;
+  background-color: #e2e8f0;
+}
+
+.db-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .db-contact-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .db-contact-left-card,
+  .db-contact-form-card {
+    height: auto;
+  }
+
+  .db-contact-left-card {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .db-contact-form-card {
+    padding: 2.25rem 1.85rem;
+    border-radius: 20px;
+  }
+
+  .db-map-card {
+    height: 380px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-contact-section {
+    padding: 2.75rem 0 2rem;
+  }
+
+  .db-contact-form-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .db-location-card {
+    padding: 1.15rem 1.15rem;
+    border-radius: 14px;
+  }
+
+  .db-contact-info-panel {
+    padding: 1.15rem 1.15rem;
+  }
+
+  .db-cform-submit-btn {
+    font-size: 1rem;
+    padding: 0.95rem 1.5rem;
+  }
+
+  .db-map-card {
+    height: 320px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .db-card-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+}

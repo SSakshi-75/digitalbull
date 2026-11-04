@@ -1,0 +1,541 @@
+/* ==========================================================================
+   DIGITAL BULL — BOOK DEMO PAGE STYLESHEET
+   Theme: Digital Bull Brand (Navy #00275b / #012559, Red #ea262a, Soft Blue #0055ff)
+   Unique Aesthetic Form Design (media_1793778421565_92dd7c60.jpg)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+/* 1. HERO BANNER */
+.db-demo-hero {
+  position: relative;
+  background-color: #00275b;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(234, 38, 42, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(0, 85, 204, 0.25) 0%, transparent 50%),
+    url('../img/breadcrumb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.75rem 0 3rem;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 3px solid #ea262a;
+}
+
+.db-demo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 39, 91, 0.78);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.db-demo-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.db-demo-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.db-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.db-breadcrumb a {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.db-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.db-breadcrumb .separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.db-breadcrumb .active {
+  color: #ea262a;
+  font-weight: 700;
+}
+
+/* 2. MAIN SECTION */
+.db-demo-section {
+  padding: 4.5rem 0 5.5rem;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 39, 91, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(234, 38, 42, 0.03) 0%, transparent 40%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Section Header (Screenshot Matched) */
+.db-demo-header {
+  margin-bottom: 3rem;
+}
+
+.db-demo-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.db-demo-eyebrow {
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #00275b;
+  text-transform: uppercase;
+}
+
+.db-demo-lines {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.db-demo-lines .db-line-navy {
+  display: inline-block;
+  width: 20px;
+  height: 2.5px;
+  background-color: #00275b;
+  border-radius: 2px;
+}
+
+.db-demo-lines .db-line-red {
+  display: inline-block;
+  width: 32px;
+  height: 2.5px;
+  background-color: #ea262a;
+  border-radius: 2px;
+}
+
+.db-demo-title {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  color: #00275b;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.db-demo-title .db-text-highlight {
+  color: #ea262a;
+}
+
+.db-demo-subtitle {
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  color: #475569;
+  max-width: 880px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* 3. AESTHETIC FORM CARD CONTAINER */
+.db-demo-card-wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.db-demo-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 
+    0 20px 45px -10px rgba(0, 39, 91, 0.09),
+    0 4px 12px rgba(0, 39, 91, 0.03);
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 3.25rem 3.5rem;
+  transition: box-shadow 0.35s ease;
+}
+
+.db-demo-card:hover {
+  box-shadow: 
+    0 28px 55px -10px rgba(0, 39, 91, 0.13),
+    0 8px 18px rgba(0, 39, 91, 0.04);
+}
+
+/* Card Top Gradient Accent Bar */
+.db-demo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ea262a 0%, #ff5757 35%, #0055ff 70%, #00275b 100%);
+}
+
+/* 4. FORM SECTION GROUPS */
+.db-form-group-card {
+  margin-bottom: 2.75rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.db-form-group-card:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0;
+}
+
+/* Group Header Banner */
+.db-form-group-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.65rem;
+}
+
+.db-group-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: rgba(0, 39, 91, 0.07);
+  color: #00275b;
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.db-group-badge svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.db-group-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #00275b;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.db-group-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 5. AESTHETIC INPUT FIELDS */
+.db-field {
+  margin-bottom: 1.25rem;
+}
+
+.db-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.db-label svg {
+  width: 15px;
+  height: 15px;
+  color: #00275b;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+.db-label .db-required {
+  color: #ea262a;
+  font-weight: 800;
+}
+
+.db-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.db-input,
+.db-select,
+.db-textarea {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.8rem 1.15rem;
+  line-height: 1.5;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.db-input::placeholder,
+.db-textarea::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.db-input:hover,
+.db-select:hover,
+.db-textarea:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.db-input:focus,
+.db-select:focus,
+.db-textarea:focus {
+  background-color: #ffffff;
+  border-color: #00275b;
+  box-shadow: 0 0 0 4px rgba(0, 39, 91, 0.08);
+}
+
+.db-field:focus-within .db-label {
+  color: #00275b;
+}
+
+.db-field:focus-within .db-label svg {
+  color: #ea262a;
+  opacity: 1;
+}
+
+/* Custom Select Dropdown with Clean Arrow */
+.db-select-wrap {
+  position: relative;
+}
+
+.db-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.75rem;
+  cursor: pointer;
+}
+
+.db-select-arrow {
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #64748b;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.db-select:focus + .db-select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+  color: #00275b;
+}
+
+/* Textarea Specific */
+.db-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Date input styling */
+.db-input[type="date"] {
+  min-height: 47px;
+}
+
+/* 6. SUBMIT BUTTON & TRUST STRIP */
+.db-form-submit-wrap {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.db-submit-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #ea262a 0%, #c41318 100%);
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 1.15rem 2.5rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(234, 38, 42, 0.28);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.db-submit-btn:hover {
+  background: linear-gradient(135deg, #ff3338 0%, #ea262a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(234, 38, 42, 0.4);
+}
+
+.db-submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 38, 42, 0.3);
+}
+
+.db-submit-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+}
+
+.db-submit-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Trust Badges Strip below button */
+.db-form-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.db-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.db-trust-item svg {
+  width: 16px;
+  height: 16px;
+  color: #16a34a;
+}
+
+/* Success Modal / Toast */
+.db-success-banner {
+  display: none;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(5, 150, 105, 0.25);
+  animation: dbSlideDown 0.4s ease forwards;
+}
+
+.db-success-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.db-success-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.db-success-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+}
+
+.db-success-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+
+.db-success-text {
+  font-size: 0.9rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@keyframes dbSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 7. RESPONSIVE DESIGN */
+@media (max-width: 991.98px) {
+  .db-demo-card {
+    padding: 2.25rem 1.85rem;
+    border-radius: 20px;
+  }
+
+  .db-demo-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .db-demo-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .db-demo-header {
+    margin-bottom: 2rem;
+  }
+
+  .db-form-group-card {
+    margin-bottom: 2rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .db-submit-btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .db-form-trust-strip {
+    gap: 0.85rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

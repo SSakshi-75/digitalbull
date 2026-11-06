@@ -17,7 +17,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="css/home.css" />
+        <link rel="stylesheet" href="css/home.css?v=3.1" />
     </asp:Content>
 
     <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

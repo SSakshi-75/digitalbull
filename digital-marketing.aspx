@@ -12,7 +12,7 @@
     </asp:Content>
 
     <asp:Content ID="StylesContent" ContentPlaceHolderID="StylesheetsContent" Runat="Server">
-        <link rel="stylesheet" href="css/digital-marketing.css" />
+        <link rel="stylesheet" href="css/digital-marketing.css?v=2.2" />
     </asp:Content>
 
     <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

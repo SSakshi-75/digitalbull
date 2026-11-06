@@ -13,7 +13,7 @@
 </asp:Content>
 
 <asp:Content ID="StylesContent" ContentPlaceHolderID="StylesheetsContent" Runat="Server">
-    <link rel="stylesheet" href="css/contact.css?v=3.9" />
+    <link rel="stylesheet" href="css/contact.css?v=4.0" />
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -73,7 +73,7 @@
                                 <div class="db-location-content">
                                     <div class="d-flex align-items-center justify-content-between mb-1">
                                         <h3 class="db-location-title">Location</h3>
-                                        <span class="db-location-badge">Gorakhpur HQ</span>
+                                        <span class="db-location-badge">Gorakhpur HO</span>
                                     </div>
                                     <p class="db-location-text">
                                         Third Floor, Mobile Plaza, Shop No 404, 405, Khowa Mandi Rd, Golghar, Gorakhpur, Uttar Pradesh 273001

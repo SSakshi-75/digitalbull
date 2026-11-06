@@ -3444,7 +3444,6 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 767.98px) {
   /* Prevent Any Horizontal Page Overflow on Mobile */
-  body.db-body,
   .db-home-hero,
   .db-home-clients-ticker,
   .db-home-about,

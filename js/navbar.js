@@ -15,12 +15,19 @@
 
     // 1. UNIVERSAL STICKY HEADER SCROLL EFFECT
     if (header) {
+      const topbar = document.querySelector('.db-topbar');
       const handleScroll = function () {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
-        if (scrollY > 10) {
-          header.classList.add('db-navbar-scrolled');
+        const topbarHeight = topbar ? topbar.offsetHeight : 40;
+        if (window.innerWidth >= 992) {
+          if (scrollY > topbarHeight) {
+            header.classList.add('is-sticky', 'db-navbar-scrolled');
+          } else {
+            header.classList.remove('is-sticky', 'db-navbar-scrolled');
+          }
         } else {
-          header.classList.remove('db-navbar-scrolled');
+          // On mobile always sticky
+          header.classList.add('is-sticky');
         }
       };
 

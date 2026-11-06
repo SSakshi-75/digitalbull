@@ -10,7 +10,7 @@
 .db-dm-hero {
   position: relative;
   background-color: #04142e;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 40%, rgba(2, 132, 199, 0.22) 0%, rgba(4, 20, 46, 0.95) 75%),
     url('../img/about-hero-bg.svg');
   background-size: cover;
@@ -250,7 +250,7 @@
 
 .db-zz-desc {
   font-size: 0.845rem;
-  color: #475569;
+  color: #000000;
   line-height: 1.58;
   margin: 0;
 }
@@ -418,46 +418,136 @@
    6. 6 THEMATIC COLOR PALETTES (DIGITAL BULL BRAND MATCHED)
    -------------------------------------------------------------------------- */
 /* Step 01: Cyan / Digital Blue (#0284c7) */
-.db-zz-theme-cyan .db-zz-outer-ring { border-color: #38bdf8; }
-.db-zz-theme-cyan .db-zz-inner-circle { background: #0284c7; }
-.db-zz-theme-cyan .db-zz-chevron { background: #0284c7; }
-.db-zz-theme-cyan .db-zz-connector-dot { border-color: #0284c7; }
-.db-zz-theme-cyan .db-zz-icon { color: #0284c7; background: #e0f2fe; }
+.db-zz-theme-cyan .db-zz-outer-ring {
+  border-color: #38bdf8;
+}
+
+.db-zz-theme-cyan .db-zz-inner-circle {
+  background: #0284c7;
+}
+
+.db-zz-theme-cyan .db-zz-chevron {
+  background: #0284c7;
+}
+
+.db-zz-theme-cyan .db-zz-connector-dot {
+  border-color: #0284c7;
+}
+
+.db-zz-theme-cyan .db-zz-icon {
+  color: #0284c7;
+  background: #e0f2fe;
+}
 
 /* Step 02: Amber / Golden Orange (#ea580c / #f59e0b) */
-.db-zz-theme-amber .db-zz-outer-ring { border-color: #fde047; }
-.db-zz-theme-amber .db-zz-inner-circle { background: #f59e0b; }
-.db-zz-theme-amber .db-zz-chevron { background: #ea580c; }
-.db-zz-theme-amber .db-zz-connector-dot { border-color: #f59e0b; }
-.db-zz-theme-amber .db-zz-icon { color: #d97706; background: #fef3c7; }
+.db-zz-theme-amber .db-zz-outer-ring {
+  border-color: #fde047;
+}
+
+.db-zz-theme-amber .db-zz-inner-circle {
+  background: #f59e0b;
+}
+
+.db-zz-theme-amber .db-zz-chevron {
+  background: #ea580c;
+}
+
+.db-zz-theme-amber .db-zz-connector-dot {
+  border-color: #f59e0b;
+}
+
+.db-zz-theme-amber .db-zz-icon {
+  color: #d97706;
+  background: #fef3c7;
+}
 
 /* Step 03: Purple / Magenta (#9333ea / #7c3aed) */
-.db-zz-theme-purple .db-zz-outer-ring { border-color: #c084fc; }
-.db-zz-theme-purple .db-zz-inner-circle { background: #7c3aed; }
-.db-zz-theme-purple .db-zz-chevron { background: #6d28d9; }
-.db-zz-theme-purple .db-zz-connector-dot { border-color: #7c3aed; }
-.db-zz-theme-purple .db-zz-icon { color: #7c3aed; background: #ede9fe; }
+.db-zz-theme-purple .db-zz-outer-ring {
+  border-color: #c084fc;
+}
+
+.db-zz-theme-purple .db-zz-inner-circle {
+  background: #7c3aed;
+}
+
+.db-zz-theme-purple .db-zz-chevron {
+  background: #6d28d9;
+}
+
+.db-zz-theme-purple .db-zz-connector-dot {
+  border-color: #7c3aed;
+}
+
+.db-zz-theme-purple .db-zz-icon {
+  color: #7c3aed;
+  background: #ede9fe;
+}
 
 /* Step 04: Fresh Emerald / Lime Green (#10b981 / #16a34a) */
-.db-zz-theme-green .db-zz-outer-ring { border-color: #a3e635; }
-.db-zz-theme-green .db-zz-inner-circle { background: #16a34a; }
-.db-zz-theme-green .db-zz-chevron { background: #15803d; }
-.db-zz-theme-green .db-zz-connector-dot { border-color: #16a34a; }
-.db-zz-theme-green .db-zz-icon { color: #16a34a; background: #dcfce7; }
+.db-zz-theme-green .db-zz-outer-ring {
+  border-color: #a3e635;
+}
+
+.db-zz-theme-green .db-zz-inner-circle {
+  background: #16a34a;
+}
+
+.db-zz-theme-green .db-zz-chevron {
+  background: #15803d;
+}
+
+.db-zz-theme-green .db-zz-connector-dot {
+  border-color: #16a34a;
+}
+
+.db-zz-theme-green .db-zz-icon {
+  color: #16a34a;
+  background: #dcfce7;
+}
 
 /* Step 05: Crimson Brand Red (#ea262a) */
-.db-zz-theme-red .db-zz-outer-ring { border-color: #fca5a5; }
-.db-zz-theme-red .db-zz-inner-circle { background: #ea262a; }
-.db-zz-theme-red .db-zz-chevron { background: #dc2626; }
-.db-zz-theme-red .db-zz-connector-dot { border-color: #ea262a; }
-.db-zz-theme-red .db-zz-icon { color: #ea262a; background: #fee2e2; }
+.db-zz-theme-red .db-zz-outer-ring {
+  border-color: #fca5a5;
+}
+
+.db-zz-theme-red .db-zz-inner-circle {
+  background: #ea262a;
+}
+
+.db-zz-theme-red .db-zz-chevron {
+  background: #dc2626;
+}
+
+.db-zz-theme-red .db-zz-connector-dot {
+  border-color: #ea262a;
+}
+
+.db-zz-theme-red .db-zz-icon {
+  color: #ea262a;
+  background: #fee2e2;
+}
 
 /* Step 06: Deep Brand Navy (#00275b) */
-.db-zz-theme-navy .db-zz-outer-ring { border-color: #60a5fa; }
-.db-zz-theme-navy .db-zz-inner-circle { background: #00275b; }
-.db-zz-theme-navy .db-zz-chevron { background: #04142e; }
-.db-zz-theme-navy .db-zz-connector-dot { border-color: #00275b; }
-.db-zz-theme-navy .db-zz-icon { color: #00275b; background: #dbeafe; }
+.db-zz-theme-navy .db-zz-outer-ring {
+  border-color: #60a5fa;
+}
+
+.db-zz-theme-navy .db-zz-inner-circle {
+  background: #00275b;
+}
+
+.db-zz-theme-navy .db-zz-chevron {
+  background: #04142e;
+}
+
+.db-zz-theme-navy .db-zz-connector-dot {
+  border-color: #00275b;
+}
+
+.db-zz-theme-navy .db-zz-icon {
+  color: #00275b;
+  background: #dbeafe;
+}
 
 /* --------------------------------------------------------------------------
    7. RESPONSIVE DESIGN (PERFECT MOBILE STEP CARDS - NO OVERFLOW OR CLIPPING)
@@ -605,12 +695,15 @@
   .db-dm-hero {
     padding: 2.75rem 0;
   }
+
   .db-dm-hero-title {
     font-size: 1.85rem;
   }
+
   .db-dm-section {
     padding: 2.75rem 0 3.75rem 0;
   }
+
   .db-dm-desc {
     margin-bottom: 2rem;
   }
@@ -677,4 +770,3 @@
     line-height: 1.5 !important;
   }
 }
-

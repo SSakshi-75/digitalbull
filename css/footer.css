@@ -312,49 +312,10 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. BACK-TO-TOP BUTTON
+   7. BACK-TO-TOP BUTTON (DISABLED)
    -------------------------------------------------------------------------- */
 .db-back-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #012559;
-  border: 1px solid rgba(1, 37, 89, 0.15);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.db-back-to-top.active,
-.db-back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.db-back-to-top:hover {
-  background: #ea262a;
-  color: #ffffff;
-  border-color: #ea262a;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(234, 38, 42, 0.4);
-}
-
-.db-back-to-top svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
+  display: none !important;
 }
 
 /* --------------------------------------------------------------------------

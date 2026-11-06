@@ -316,26 +316,28 @@
    -------------------------------------------------------------------------- */
 .db-navbar-toggler {
   display: none;
-  background-color: #ffffff;
-  border: 3px solid var(--db-navy, #012559);
-  border-radius: 14px;
-  padding: 0;
-  color: var(--db-navy, #012559);
+  background-color: #ebf5fe !important;
+  border: 2px solid #0077c8 !important;
+  border-radius: 10px !important;
+  padding: 0 !important;
+  color: #0077c8 !important;
   cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 42px;
-  box-shadow: 0 2px 8px rgba(1, 37, 89, 0.08);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 38px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  flex-shrink: 0 !important;
 }
 
 .db-navbar-toggler:hover,
 .db-navbar-toggler:focus {
-  background-color: #f8fafc;
-  border-color: var(--db-navy, #012559);
-  color: var(--db-navy, #012559);
-  outline: none;
+  background-color: #dbeafe !important;
+  border-color: #0077c8 !important;
+  color: #0077c8 !important;
+  outline: none !important;
 }
 
 .db-navbar-toggler:active {
@@ -347,22 +349,58 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. MOBILE SIDEBAR DRAWER & BACKDROP (#dbMobileSidebar, #dbSidebarBackdrop)
+   4. DESKTOP NAVIGATION STRUCTURE (min-width: 992px)
    -------------------------------------------------------------------------- */
-.db-sidebar-backdrop {
-  display: none;
+@media (min-width: 992px) {
+  .db-navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .db-navbar-brand-row {
+    width: auto !important;
+  }
+
+  .db-navbar-toggler {
+    display: none !important;
+  }
+
+  .db-nav-collapse {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex: 1 1 auto !important;
+    margin-left: 1.5rem !important;
+    border-top: none !important;
+  }
+
+  .db-nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.5rem !important;
+  }
+
+  .db-nav-cta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-left: auto !important;
+  }
 }
 
-.db-mobile-sidebar {
-  display: none;
-}
-
+/* --------------------------------------------------------------------------
+   5. MOBILE NAVIGATION (RESPONSIVE DROPDOWN UNDER HEADER)
+   -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
   .db-topbar {
     display: none !important;
   }
 
-  /* 1. Mobile Sticky Navbar (Screenshot Matched: Navy Border-Bottom) */
   .db-header {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -372,269 +410,204 @@
     width: 100% !important;
     z-index: 1050 !important;
     background-color: #ffffff !important;
-    border-bottom: 3px solid var(--db-navy, #012559) !important;
+    border-bottom: 2px solid var(--db-navy, #012559) !important;
     box-shadow: 0 4px 16px rgba(1, 37, 89, 0.08) !important;
+    padding: 0.65rem 0 !important;
   }
 
-  body.db-sidebar-open {
-    overflow: hidden !important;
-    touch-action: none;
-  }
-
-  .db-navbar-toggler {
+  .db-navbar {
     display: flex !important;
-    margin-left: auto;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .db-navbar-brand-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .db-brand {
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .db-brand img {
-    height: 38px !important;
-    max-width: 160px;
+    height: 88px !important;
+    max-height: 92px !important;
+    width: auto !important;
+    max-width: 220px !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 
-  /* 2. Mobile Backdrop */
-  .db-sidebar-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(4, 20, 46, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 1060;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Hamburger Button */
+  .db-navbar-toggler {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 46px !important;
+    height: 40px !important;
+    background-color: #ebf5fe !important;
+    border: 2px solid #0077c8 !important;
+    border-radius: 10px !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    outline: none !important;
+    flex-shrink: 0 !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
   }
 
-  .db-sidebar-backdrop.active,
-  .db-sidebar-backdrop.show {
-    opacity: 1;
-    visibility: visible;
+  .db-navbar-toggler:hover,
+  .db-navbar-toggler:focus {
+    background-color: #dbeafe !important;
+    border-color: #0077c8 !important;
+    outline: none !important;
   }
 
-  /* 3. Mobile Slide-In Sidebar Drawer */
-  .db-mobile-sidebar {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: min(85vw, 340px);
-    background: #ffffff;
-    z-index: 1070;
-    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.25);
-    transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
+  /* Default State: Show ☰ Bars, Hide ✕ Close */
+  .db-navbar-toggler .db-icon-bars {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  .db-mobile-sidebar.active,
-  .db-mobile-sidebar.show {
-    transform: translateX(0);
+  .db-navbar-toggler .db-icon-close {
+    display: none !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  /* Sidebar Header */
-  .db-sidebar-header {
-    padding: 1.15rem 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--db-navy, #012559);
-    background: #ffffff;
+  /* Open State: Hide ☰ Bars, Show ✕ Close */
+  .db-navbar-toggler.is-open .db-icon-bars {
+    display: none !important;
   }
 
-  .db-sidebar-brand img {
-    height: 36px;
-    width: auto;
-    object-fit: contain;
+  .db-navbar-toggler.is-open .db-icon-close {
+    display: flex !important;
   }
 
-  .db-sidebar-close {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    color: #00275b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    padding: 0;
-  }
-
-  .db-sidebar-close:hover {
-    background: #ea262a;
-    color: #ffffff;
-    border-color: #ea262a;
-    transform: rotate(90deg);
-  }
-
-  /* Sidebar Contact Strip */
-  .db-sidebar-contact {
-    background: #f8fafc;
-    padding: 0.75rem 1.25rem;
-    border-bottom: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .db-sidebar-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #00275b;
-    text-decoration: none;
-  }
-
-  .db-sidebar-contact-item svg {
-    color: #ea262a;
-    flex-shrink: 0;
-  }
-
-  /* Sidebar Body & Menu */
-  .db-sidebar-body {
-    flex: 1;
-    padding: 1rem 1.25rem;
-    overflow-y: auto;
-  }
-
-  .db-sidebar-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .db-sidebar-item {
-    width: 100%;
-  }
-
-  .db-sidebar-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem 0.95rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #1e293b;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
-    width: 100%;
-    background: transparent;
-    cursor: pointer;
-  }
-
-  .db-sidebar-link:hover {
-    background: rgba(0, 39, 91, 0.05);
-    color: #00275b;
-  }
-
-  .db-sidebar-link.active {
-    background: rgba(234, 38, 42, 0.08);
-    color: #ea262a;
-    border-color: rgba(234, 38, 42, 0.2);
-  }
-
-  /* Accordion Sub-Menu for Service */
-  .db-sidebar-chevron {
-    transition: transform 0.25s ease;
-    color: #64748b;
-  }
-
-  .db-sidebar-dropdown.open .db-sidebar-chevron {
-    transform: rotate(180deg);
-    color: #ea262a;
-  }
-
-  .db-sidebar-dropdown.open > .db-sidebar-link {
-    color: #ea262a;
-  }
-
-  .db-sidebar-sub {
-    list-style: none;
-    padding: 0.35rem 0 0.35rem 1rem;
-    margin: 0.25rem 0 0 0;
+  /* Mobile Dropdown Collapse (Directly Under Header: --------------------------------) */
+  .db-nav-collapse {
     display: none;
-    flex-direction: column;
-    gap: 0.25rem;
-    border-left: 2px solid #e2e8f0;
-    margin-left: 0.75rem;
+    width: 100% !important;
+    border-top: 2px solid #0077c8 !important;
+    margin-top: 0.65rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.75rem !important;
+    background-color: #ffffff !important;
   }
 
-  .db-sidebar-dropdown.open .db-sidebar-sub {
-    display: flex;
+  .db-nav-collapse.is-open,
+  .db-nav-collapse.show {
+    display: block !important;
+    animation: dbNavDrop 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
   }
 
-  .db-sub-link {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: #475569;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.2s ease;
+  @keyframes dbNavDrop {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .db-sub-link:hover {
-    color: #ea262a;
-    background: #f8fafc;
-    padding-left: 1rem;
+  .db-nav-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    gap: 0.15rem !important;
   }
 
-  /* Sidebar Footer CTA Buttons */
-  .db-sidebar-footer {
-    padding: 1.15rem 1.25rem;
-    border-top: 1px solid #f1f5f9;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-    background: #ffffff;
+  .db-nav-item {
+    width: 100% !important;
   }
 
-  .db-sidebar-cta-btn {
-    width: 100%;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.92rem;
-    font-weight: 700;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.25s ease;
+  .db-nav-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0.7rem 0.5rem !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    color: #012559 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    text-decoration: none !important;
   }
 
-  .db-sidebar-cta-btn.db-btn-demo {
-    background: #ea262a;
-    color: #ffffff;
+  .db-nav-link:hover,
+  .db-nav-link.active {
+    color: #ea262a !important;
+    padding-left: 0.75rem !important;
   }
 
-  .db-sidebar-cta-btn.db-btn-demo:hover {
-    background: #cf1c20;
-    color: #ffffff;
-    transform: translateY(-1px);
+  /* Services Dropdown in mobile */
+  .db-dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    margin: 0.25rem 0 0.5rem 0 !important;
+    padding: 0.4rem !important;
+    box-shadow: none !important;
+    display: none;
   }
 
-  .db-sidebar-cta-btn.db-btn-login {
-    background: #00275b;
-    color: #ffffff;
+  .db-nav-item.dropdown.show .db-dropdown-menu {
+    display: block !important;
   }
 
-  .db-sidebar-cta-btn.db-btn-login:hover {
-    background: #001b3f;
-    color: #ffffff;
-    transform: translateY(-1px);
+  .db-dropdown-item {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* CTA Buttons inside mobile collapse */
+  .db-nav-cta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 0 0.25rem 0 !important;
+    width: 100% !important;
+  }
+
+  .db-nav-cta .db-btn-nav-primary {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 42px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+  }
+
+  @media (max-width: 375px) {
+    .db-header {
+      padding: 0.45rem 0 !important;
+    }
+    .db-brand img {
+      height: 76px !important;
+      max-width: 190px !important;
+    }
+    .db-navbar-toggler {
+      width: 44px !important;
+      height: 38px !important;
+    }
   }
 }

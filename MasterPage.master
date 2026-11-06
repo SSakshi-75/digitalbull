@@ -21,10 +21,10 @@
 
     <!-- Modular CSS Architecture -->
     <link rel="stylesheet" href="css/global.css?v=3.0" />
-    <link rel="stylesheet" href="css/navbar.css?v=3.1" />
+    <link rel="stylesheet" href="css/navbar.css?v=4.2" />
     <link rel="stylesheet" href="css/footer.css?v=3.0" />
     <link rel="stylesheet" href="animations/animations.css?v=3.0" />
-    <link rel="stylesheet" href="css/responsive.css?v=3.0" />
+    <link rel="stylesheet" href="css/responsive.css?v=4.2" />
 
     <!-- Page Specific Stylesheet PlaceHolder -->
     <asp:ContentPlaceHolder ID="StylesheetsContent" runat="server">
@@ -75,14 +75,33 @@
         <!-- Sticky Main Navbar -->
         <header class="db-header" role="banner">
             <div class="container">
-                <nav class="db-navbar d-flex align-items-center justify-content-between" aria-label="Main Navigation">
-                    <!-- Brand Logo -->
-                    <a href="index.aspx" class="db-brand" aria-label="Digital Bull Home">
-                        <img src="assets/LOGO.png" alt="Digital Bull Logo" width="210" height="68" />
-                    </a>
+                <nav class="db-navbar" aria-label="Main Navigation">
+                    <div class="db-navbar-brand-row d-flex align-items-center justify-content-between">
+                        <!-- Brand Logo -->
+                        <a href="index.aspx" class="db-brand" aria-label="Digital Bull Home">
+                            <img src="assets/LOGO.png" alt="Digital Bull Logo" width="210" height="68" />
+                        </a>
 
-                    <!-- Desktop Nav Menu -->
-                    <div class="db-nav-collapse d-none d-lg-flex align-items-center">
+                        <!-- Mobile Hamburger Button (☰ <-> ✕) -->
+                        <button class="db-navbar-toggler d-lg-none" type="button" id="dbNavbarToggler" aria-controls="dbNavCollapse" aria-expanded="false" aria-label="Toggle navigation menu" onclick="toggleDbNavbar(event)">
+                            <span class="db-icon-bars" aria-hidden="true">
+                                <svg viewBox="0 0 24 18" width="22" height="16" fill="none" stroke="#0077c8" stroke-width="2.6" stroke-linecap="round">
+                                    <line x1="2.5" y1="2" x2="21.5" y2="2"></line>
+                                    <line x1="2.5" y1="9" x2="21.5" y2="9"></line>
+                                    <line x1="2.5" y1="16" x2="21.5" y2="16"></line>
+                                </svg>
+                            </span>
+                            <span class="db-icon-close" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0077c8" stroke-width="2.6" stroke-linecap="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Single Unified Navigation Menu (Desktop Row, Mobile Dropdown - No Duplication!) -->
+                    <div class="db-nav-collapse" id="dbNavCollapse">
                         <ul class="db-nav-menu">
                             <li class="db-nav-item">
                                 <a href="index.aspx" class="db-nav-link active">Home</a>
@@ -92,7 +111,7 @@
                             </li>
                             <li class="db-nav-item dropdown">
                                 <a href="#db-services" class="db-nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true">
-                                    <span>Service</span>
+                                    <span>Services</span>
                                     <svg class="db-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
                                 </a>
                                 <ul class="db-dropdown-menu">
@@ -105,7 +124,7 @@
                                 </ul>
                             </li>
                             <li class="db-nav-item">
-                                <a href="portfolio.aspx" class="db-nav-link">Portfolio</a>
+                                <a href="portfolio.aspx" class="db-nav-link">Gallery</a>
                             </li>
                             <li class="db-nav-item">
                                 <a href="blog.aspx" class="db-nav-link">Blog</a>
@@ -120,103 +139,16 @@
                                 <a href="contact.aspx" class="db-nav-link">Contact</a>
                             </li>
                         </ul>
-                    </div>
 
-                    <!-- Header CTA Buttons (Exact Screenshot Matched) -->
-                    <div class="d-none d-lg-flex align-items-center gap-2">
-                        <a href="demo.aspx" class="db-btn-nav-primary db-btn-nav-demo">Free Demo</a>
-                        <a href="login.aspx" class="db-btn-nav-primary db-btn-nav-login">Login</a>
+                        <!-- Header CTA Buttons -->
+                        <div class="db-nav-cta d-flex align-items-center gap-2">
+                            <a href="demo.aspx" class="db-btn-nav-primary db-btn-nav-demo">Free Demo</a>
+                            <a href="login.aspx" class="db-btn-nav-primary db-btn-nav-login">Login</a>
+                        </div>
                     </div>
-
-                    <!-- Mobile Hamburger Button (Exact Screenshot Matched) -->
-                    <button class="db-navbar-toggler d-lg-none" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
-                        <svg viewBox="0 0 24 24" width="24" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
-                            <line x1="3.5" y1="5" x2="20.5" y2="5"></line>
-                            <line x1="3.5" y1="12" x2="20.5" y2="12"></line>
-                            <line x1="3.5" y1="19" x2="20.5" y2="19"></line>
-                        </svg>
-                    </button>
                 </nav>
             </div>
         </header>
-
-        <!-- Mobile Sidebar Backdrop -->
-        <div class="db-sidebar-backdrop" id="dbSidebarBackdrop"></div>
-
-        <!-- Mobile Off-Canvas Navigation Sidebar -->
-        <aside class="db-mobile-sidebar" id="dbMobileSidebar" aria-label="Mobile Navigation Sidebar">
-            <!-- Sidebar Header with Logo and Close Button -->
-            <div class="db-sidebar-header">
-                <a href="index.aspx" class="db-sidebar-brand" aria-label="Digital Bull Home">
-                    <img src="assets/LOGO.png" alt="Digital Bull Logo" height="36" />
-                </a>
-                <button type="button" class="db-sidebar-close" id="dbSidebarClose" aria-label="Close menu">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Quick Contact Strip inside Sidebar -->
-            <div class="db-sidebar-contact">
-                <a href="tel:+919044815507" class="db-sidebar-contact-item">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    <span>+91-9044815507</span>
-                </a>
-                <a href="mailto:helpdigitalbulls@gmail.com" class="db-sidebar-contact-item">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <span>helpdigitalbulls@gmail.com</span>
-                </a>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="db-sidebar-body">
-                <ul class="db-sidebar-menu">
-                    <li class="db-sidebar-item">
-                        <a href="index.aspx" class="db-sidebar-link active">Home</a>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="about.aspx" class="db-sidebar-link">About</a>
-                    </li>
-                    <li class="db-sidebar-item db-sidebar-dropdown" id="dbSidebarServices">
-                        <button type="button" class="db-sidebar-link db-dropdown-trigger" aria-expanded="false">
-                            <span>Service</span>
-                            <svg class="db-sidebar-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                        </button>
-                        <ul class="db-sidebar-sub">
-                            <li><a href="digital-marketing.aspx" class="db-sub-link">Digital Marketing</a></li>
-                            <li><a href="social-media-marketing.aspx" class="db-sub-link">Social Media Marketing</a></li>
-                            <li><a href="seo.aspx" class="db-sub-link">Search engine Optimisation OR AIO</a></li>
-                            <li><a href="website-development.aspx" class="db-sub-link">Website & app Development</a></li>
-                            <li><a href="software-development.aspx" class="db-sub-link">Software Development</a></li>
-                            <li><a href="performance-marketing.aspx" class="db-sub-link">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="portfolio.aspx" class="db-sidebar-link">Portfolio</a>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="blog.aspx" class="db-sidebar-link">Blog</a>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="pricing.aspx" class="db-sidebar-link">Plan</a>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="career.aspx" class="db-sidebar-link">Career</a>
-                    </li>
-                    <li class="db-sidebar-item">
-                        <a href="contact.aspx" class="db-sidebar-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Sidebar Footer CTA Buttons -->
-            <div class="db-sidebar-footer">
-                <a href="demo.aspx" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-demo text-center">Free Demo</a>
-                <a href="login.aspx" class="db-btn-nav-primary db-sidebar-cta-btn db-btn-login text-center">Login</a>
-            </div>
-        </aside>
 
         <!-- Main Body Content Area -->
         <main id="main-content" class="db-main" role="main">
@@ -343,9 +275,42 @@
 
     <!-- Core Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/navbar.js?v=3.0"></script>
+    <script src="js/navbar.js?v=4.0"></script>
     <script src="js/main.js?v=3.0"></script>
     <script src="animations/scroll-animation.js?v=3.0"></script>
+    <script>
+        function toggleDbNavbar(e) {
+            if (e) {
+                if (e.preventDefault) e.preventDefault();
+                if (e.stopPropagation) e.stopPropagation();
+            }
+            var toggler = document.getElementById('dbNavbarToggler');
+            var collapse = document.getElementById('dbNavCollapse');
+            if (!toggler || !collapse) return;
+
+            var isOpen = collapse.classList.contains('is-open') || collapse.classList.contains('show');
+            if (isOpen) {
+                collapse.classList.remove('is-open', 'show');
+                toggler.classList.remove('is-open');
+                toggler.setAttribute('aria-expanded', 'false');
+            } else {
+                collapse.classList.add('is-open', 'show');
+                toggler.classList.add('is-open');
+                toggler.setAttribute('aria-expanded', 'true');
+            }
+        }
+        function closeDbNavbar() {
+            var toggler = document.getElementById('dbNavbarToggler');
+            var collapse = document.getElementById('dbNavCollapse');
+            if (collapse) collapse.classList.remove('is-open', 'show');
+            if (toggler) {
+                toggler.classList.remove('is-open');
+                toggler.setAttribute('aria-expanded', 'false');
+            }
+        }
+        window.toggleDbNavbar = toggleDbNavbar;
+        window.closeDbNavbar = closeDbNavbar;
+    </script>
 
     <!-- Page Specific Script PlaceHolder -->
     <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">

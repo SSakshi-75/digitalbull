@@ -650,32 +650,53 @@ table {
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
   .db-header {
-    padding: 0.45rem 0 !important;
+    padding: 0.65rem 0 !important;
+  }
+
+  .db-brand {
+    flex-shrink: 0 !important;
   }
 
   .db-brand img {
-    height: 38px !important;
-    max-width: 160px !important;
+    height: 88px !important;
+    max-height: 92px !important;
+    width: auto !important;
+    max-width: 220px !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 
   .db-navbar-toggler {
-    width: 40px !important;
+    width: 46px !important;
     height: 40px !important;
+    background-color: #ebf5fe !important;
+    border: 2px solid #0077c8 !important;
+    border-radius: 10px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-left: auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    flex-shrink: 0 !important;
   }
 
-  .db-mobile-nav,
-  .db-header .db-nav-collapse.d-lg-none {
-    top: 62px !important;
-    padding: 1.25rem !important;
-    max-height: calc(100vh - 62px) !important;
-    overflow-y: auto !important;
-    border-top: 3px solid #ea262a !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+  @media (max-width: 375px) {
+    .db-header {
+      padding: 0.45rem 0 !important;
+    }
+
+    .db-brand img {
+      height: 76px !important;
+      max-width: 190px !important;
+    }
+
+    .db-navbar-toggler {
+      width: 44px !important;
+      height: 38px !important;
+    }
   }
+
 
   /* Footer Responsiveness */
   .db-footer {

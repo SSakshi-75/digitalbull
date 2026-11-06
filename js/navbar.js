@@ -1,7 +1,6 @@
 /**
  * DIGITAL BULL — UNIVERSAL NAVBAR & HEADER CONTROLLER
- * Version: 3.0 (2026 Sticky Navbar for Desktop, MacBook, Tablet & Mobile)
- * Supports sticky scroll state across all devices, mobile sidebar drawer, and keyboard accessibility.
+ * Version: 4.0 (2026 Responsive Dropdown Navbar for Desktop & Mobile)
  */
 
 (function () {
@@ -9,16 +8,12 @@
 
   function initNavbar() {
     const header = document.querySelector('.db-header');
-    const toggler = document.querySelector('.db-navbar-toggler');
-    const sidebar = document.getElementById('dbMobileSidebar');
-    const backdrop = document.getElementById('dbSidebarBackdrop');
-    const closeBtn = document.getElementById('dbSidebarClose');
-    const sidebarDropdownTrigger = document.querySelector('.db-dropdown-trigger');
-    const sidebarServices = document.getElementById('dbSidebarServices');
-    const desktopDropdownToggles = document.querySelectorAll('.db-nav-collapse .db-nav-item.dropdown > .db-nav-link');
-    const sidebarLinks = document.querySelectorAll('.db-sidebar-link:not(.db-dropdown-trigger), .db-sub-link, .db-sidebar-cta-btn');
+    const toggler = document.getElementById('dbNavbarToggler');
+    const collapse = document.getElementById('dbNavCollapse');
+    const dropdownToggles = document.querySelectorAll('.db-nav-item.dropdown > .db-nav-link');
+    const navLinks = document.querySelectorAll('.db-nav-link:not(.dropdown-toggle), .db-dropdown-item, .db-btn-nav-primary');
 
-    // 1. UNIVERSAL STICKY HEADER SCROLL EFFECT (Desktop, MacBook, Tablet, Mobile)
+    // 1. UNIVERSAL STICKY HEADER SCROLL EFFECT
     if (header) {
       const handleScroll = function () {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
@@ -31,107 +26,83 @@
 
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('resize', handleScroll, { passive: true });
-      handleScroll(); // Initial check on load
+      handleScroll();
     }
 
-    // 2. MOBILE SIDEBAR FUNCTIONS
-    function openSidebar() {
-      if (sidebar && backdrop) {
-        sidebar.classList.add('active');
-        sidebar.classList.add('show');
-        backdrop.classList.add('active');
-        backdrop.classList.add('show');
-        document.body.classList.add('db-sidebar-open');
-        
-        if (toggler) toggler.setAttribute('aria-expanded', 'true');
+    // 2. TOGGLE MOBILE NAVBAR (☰ <-> ✕)
+    function toggleNavbar(e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      if (!toggler || !collapse) return;
+
+      const isOpen = collapse.classList.contains('is-open') || collapse.classList.contains('show');
+      if (isOpen) {
+        collapse.classList.remove('is-open', 'show');
+        toggler.classList.remove('is-open');
+        toggler.setAttribute('aria-expanded', 'false');
+      } else {
+        collapse.classList.add('is-open', 'show');
+        toggler.classList.add('is-open');
+        toggler.setAttribute('aria-expanded', 'true');
       }
     }
 
-    function closeSidebar() {
-      if (sidebar && backdrop) {
-        sidebar.classList.remove('active');
-        sidebar.classList.remove('show');
-        backdrop.classList.remove('active');
-        backdrop.classList.remove('show');
-        document.body.classList.remove('db-sidebar-open');
-        if (toggler) {
-          toggler.setAttribute('aria-expanded', 'false');
-          toggler.focus();
-        }
+    function closeNavbar() {
+      if (collapse) collapse.classList.remove('is-open', 'show');
+      if (toggler) {
+        toggler.classList.remove('is-open');
+        toggler.setAttribute('aria-expanded', 'false');
       }
     }
 
-    // Toggle / Open Sidebar
+    window.toggleDbNavbar = toggleNavbar;
+    window.closeDbNavbar = closeNavbar;
+
     if (toggler) {
-      toggler.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (sidebar && sidebar.classList.contains('active')) {
-          closeSidebar();
-        } else {
-          openSidebar();
-        }
-      });
+      toggler.onclick = toggleNavbar;
     }
 
-    // Close on Close Button click
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        closeSidebar();
-      });
-    }
-
-    // Close on Backdrop click
-    if (backdrop) {
-      backdrop.addEventListener('click', function () {
-        closeSidebar();
-      });
-    }
-
-    // Close on ESC key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && sidebar && sidebar.classList.contains('active')) {
-        closeSidebar();
-      }
-    });
-
-    // Close on clicking links inside sidebar
-    sidebarLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        closeSidebar();
-      });
-    });
-
-    // 3. SIDEBAR SERVICES ACCORDION DROPDOWN
-    if (sidebarDropdownTrigger && sidebarServices) {
-      sidebarDropdownTrigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const isOpen = sidebarServices.classList.contains('open');
-        sidebarServices.classList.toggle('open');
-        sidebarDropdownTrigger.setAttribute('aria-expanded', !isOpen);
-      });
-    }
-
-    // 4. DESKTOP DROPDOWN ACCESSIBILITY
-    desktopDropdownToggles.forEach(function (toggle) {
+    // 3. DROPDOWN (SERVICES) TOGGLE FOR DESKTOP & MOBILE
+    dropdownToggles.forEach(function (toggle) {
       toggle.addEventListener('click', function (e) {
-        if (window.innerWidth >= 992) {
-          const parentItem = toggle.closest('.db-nav-item.dropdown');
-          if (parentItem) {
-            parentItem.classList.toggle('show');
-          }
+        e.preventDefault();
+        e.stopPropagation();
+        const parentItem = toggle.closest('.db-nav-item.dropdown');
+        if (parentItem) {
+          parentItem.classList.toggle('show');
+          const isExpanded = parentItem.classList.contains('show');
+          toggle.setAttribute('aria-expanded', isExpanded);
         }
       });
     });
 
-    // Close desktop dropdown on clicking outside
+    // Close on clicking outside
     document.addEventListener('click', function (e) {
+      if (!e.target.closest('.db-navbar')) {
+        closeNavbar();
+      }
       if (!e.target.closest('.db-nav-item.dropdown')) {
         document.querySelectorAll('.db-nav-item.dropdown.show').forEach(function (item) {
           item.classList.remove('show');
         });
+      }
+    });
+
+    // Close on clicking links in mobile
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < 992) {
+          closeNavbar();
+        }
+      });
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeNavbar();
       }
     });
   }

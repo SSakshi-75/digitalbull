@@ -42,6 +42,7 @@
         backdrop.classList.add('active');
         backdrop.classList.add('show');
         document.body.classList.add('db-sidebar-open');
+        
         if (toggler) toggler.setAttribute('aria-expanded', 'true');
       }
     }

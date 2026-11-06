@@ -1,0 +1,410 @@
+/**
+ * DIGITAL BULL - LOGIN PAGE STYLES (AGENT LOGIN & CLIENT PORTAL)
+ * Version: 1.0 (Pixel-accurate match to reference design)
+ */
+
+/* --------------------------------------------------------------------------
+   1. MAIN LOGIN SECTION
+   -------------------------------------------------------------------------- */
+.db-login-section {
+  padding: 4.5rem 1rem 5.5rem;
+  background-color: #f4f7fc;
+  background-image: 
+    radial-gradient(circle at 8% 18%, rgba(0, 39, 91, 0.04) 0%, transparent 42%),
+    radial-gradient(circle at 92% 82%, rgba(234, 38, 42, 0.04) 0%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 65%);
+  min-height: calc(100vh - 430px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.db-login-container {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.db-login-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  gap: 2.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. LOGIN CARD (AGENT & CLIENT)
+   -------------------------------------------------------------------------- */
+.db-login-card {
+  flex: 1 1 0;
+  max-width: 460px;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.6rem 2.5rem 2.85rem;
+  box-shadow: 
+    0 18px 45px rgba(0, 39, 91, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.db-login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 24px 55px rgba(0, 39, 91, 0.12),
+    0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Decorative Top-Right Corner Quarter-Circle Accent */
+.db-card-corner-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68px;
+  height: 68px;
+  border-bottom-left-radius: 68px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.db-accent-agent {
+  background-color: #ffe3de;
+}
+
+.db-accent-client {
+  background-color: #e8f1fc;
+}
+
+/* --------------------------------------------------------------------------
+   3. CARD HEADER (ICON, EYEBROW, TITLE, SUBTITLE)
+   -------------------------------------------------------------------------- */
+.db-login-card-header {
+  position: relative;
+  z-index: 2;
+}
+
+.db-login-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.db-icon-agent {
+  background-color: #ea262a;
+  box-shadow: 0 8px 20px rgba(234, 38, 42, 0.28);
+  color: #ffffff;
+}
+
+.db-icon-client {
+  background-color: #0056d6;
+  box-shadow: 0 8px 20px rgba(0, 86, 214, 0.28);
+  color: #ffffff;
+}
+
+.db-login-eyebrow {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #53759a;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.db-login-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #00275b;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.db-login-title span {
+  color: #ea262a;
+}
+
+.db-login-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 1.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. FORM & INPUT FIELDS
+   -------------------------------------------------------------------------- */
+.db-login-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.db-input-group {
+  position: relative;
+  margin-bottom: 1.05rem;
+  width: 100%;
+}
+
+.db-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.db-input-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.db-login-input {
+  width: 100%;
+  padding: 12.5px 16px 12.5px 44px;
+  border: 1.5px solid #dbe2ea;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #1e293b;
+  background: #ffffff;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.db-login-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.db-login-input:focus {
+  border-color: #00275b;
+  box-shadow: 0 0 0 3px rgba(0, 39, 91, 0.1);
+  background-color: #ffffff;
+}
+
+/* Filled / Soft Blue Focus State on Left Card Password Field */
+.db-input-group-filled .db-login-input {
+  background-color: #edf4fc;
+  border-color: #cfdff4;
+}
+
+.db-input-group-filled .db-login-input:focus {
+  background-color: #ffffff;
+  border-color: #ea262a;
+  box-shadow: 0 0 0 3px rgba(234, 38, 42, 0.12);
+}
+
+.db-input-group .db-login-input.db-has-toggle {
+  padding-right: 44px;
+}
+
+.db-toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.db-toggle-password:hover {
+  color: #00275b;
+}
+
+.db-toggle-password svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   5. ACTION BUTTONS
+   -------------------------------------------------------------------------- */
+.db-btn-login-submit {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 1.4rem;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+}
+
+.db-btn-agent {
+  background: #ea262a;
+  box-shadow: 0 8px 20px rgba(234, 38, 42, 0.3);
+}
+
+.db-btn-agent:hover {
+  background: #d61f23;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(234, 38, 42, 0.42);
+}
+
+.db-btn-client {
+  background: linear-gradient(135deg, #00275b 0%, #1554c0 55%, #2563eb 100%);
+  box-shadow: 0 8px 20px rgba(0, 39, 91, 0.28);
+}
+
+.db-btn-client:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 39, 91, 0.38);
+}
+
+.db-btn-login-submit:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. CENTER 'OR' DIVIDER
+   -------------------------------------------------------------------------- */
+.db-login-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 36px;
+  flex-shrink: 0;
+}
+
+.db-divider-line {
+  width: 1px;
+  flex: 1;
+  background-color: #e2e8f0;
+}
+
+.db-divider-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin: 0.65rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   7. FOOTER LINK (CLIENT CARD)
+   -------------------------------------------------------------------------- */
+.db-login-footer-link {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.db-login-footer-link a {
+  color: #ea262a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.db-login-footer-link a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 880px) {
+  .db-login-section {
+    padding: 3.5rem 1rem 4.5rem;
+  }
+
+  .db-login-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .db-login-card {
+    max-width: 440px;
+    width: 100%;
+  }
+
+  .db-login-divider {
+    flex-direction: row;
+    width: 100%;
+    max-width: 440px;
+    height: 36px;
+  }
+
+  .db-divider-line {
+    height: 1px;
+    width: 100%;
+  }
+
+  .db-divider-badge {
+    margin: 0 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .db-login-section {
+    padding: 2.5rem 0.85rem 3.5rem;
+  }
+
+  .db-login-card {
+    padding: 2rem 1.4rem 2.2rem;
+    border-radius: 20px;
+  }
+
+  .db-login-title {
+    font-size: 1.6rem;
+  }
+
+  .db-login-subtitle {
+    font-size: 0.82rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
